@@ -22,12 +22,13 @@ $('#close-login-form').click(() =>{
 })
 
 $('#btn-register').click(()=>{
-  $('.login-form-container').removeClass('active');
-
-  $('.register-form-container').addClass('active');
-
+  $('#formLogin').addClass('d-none');
+  $('#formRegister').removeClass('d-none');
 })
-
+$('#btn-login').click(()=>{
+  $('#formLogin').removeClass('d-none');
+  $('#formRegister').addClass('d-none');
+})
 $('.home').on('mousemove', (e) =>{
 
   $('.home-parallax').each(function(){
