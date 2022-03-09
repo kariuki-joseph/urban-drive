@@ -49,3 +49,4 @@ Route::put('/{id}','HomeController@update');
 Route::delete('/{id}','HomeController@destroy');
 
 
+                                                                                                                                                                                        

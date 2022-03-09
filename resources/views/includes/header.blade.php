@@ -43,17 +43,36 @@
     <span id="close-login-form" class="fas fa-times"></span>
 
     <form action="">
-        <h3>user login</h3>
+        <h3>User login</h3>
         <input type="email" placeholder="email" class="box">
         <input type="password" placeholder="password" class="box">
-        <p> forget your password <a href="#">click here</a> </p>
         <input type="submit" value="login" class="btn">
         <p>or login with</p>
         <div class="buttons">
             <a href="#" class="btn"> google </a>
             <a href="#" class="btn"> facebook </a>
         </div>
-        <p> don't have an account <a href="#">create one</a> </p>
+        <p> forget your password <a href="#">click here</a> </p>
+        <p> For admin login <a href="/admin">click here</a> </p>
+
+        <p> don't have an account <a href="#" id="btn-register">create one</a> </p>
+    </form>
+
+</div>
+
+<div class="register-form-container">
+
+    <span id="close-register-form" class="fas fa-times"></span>
+
+    <form action="">
+        <h3>User Registration</h3>
+        <input type="text" name="username" placeholder="name" class="box">
+        <input type="tel" name="phone" placeholder="phone" class="box">
+        <input type="email" name="email" placeholder="email" class="box">
+        <input type="password" name="password" placeholder="password" class="box">
+        <input type="submit" value="register" class="btn">
+        
+        <p> Already have an account? <a href="#">login here</a> </p>
     </form>
 
 </div>

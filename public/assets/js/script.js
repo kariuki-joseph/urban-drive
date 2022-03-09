@@ -21,6 +21,12 @@ $('#close-login-form').click(() =>{
   $('.login-form-container').removeClass('active');
 })
 
+$('#btn-register').click(()=>{
+  $('.login-form-container').removeClass('active');
+
+  $('.register-form-container').addClass('active');
+
+})
 
 $('.home').on('mousemove', (e) =>{
 
