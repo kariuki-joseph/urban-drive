@@ -9,42 +9,42 @@
         <div class="box">
             <i class="fas fa-car"></i>
             <h3>car selling</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
+            <p>We deal of good condtion ex-japan cars ,with a low mileage</p>
             <a href="#" class="btn"> read more</a>
         </div>
 
         <div class="box">
             <i class="fas fa-tools"></i>
-            <h3>parts repair</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
+            <h3>Repair services</h3>
+            <p>We deal with repairs of vehicles as well, THis entiles any mechanical repairs.</p>
             <a href="#" class="btn"> read more</a>
         </div>
 
         <div class="box">
             <i class="fas fa-car-crash"></i>
             <h3>car insurance</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
+            <p>After you have bought a car from us we offer insurance services to our clients.</p>
             <a href="#" class="btn"> read more</a>
         </div>
 
         <div class="box">
             <i class="fas fa-car-battery"></i>
             <h3>battery replacement</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
+            <p>EX-japan cars come with used batteries, that need to be changed.</p>
             <a href="#" class="btn"> read more</a>
         </div>
 
         <div class="box">
             <i class="fas fa-gas-pump"></i>
             <h3>oil change</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
+            <p>After your car has travelled the required kilometres it needs an oil change.</p>
             <a href="#" class="btn"> read more</a>
         </div>
 
         <div class="box">
             <i class="fas fa-headset"></i>
             <h3>24/7 support</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
+            <p>Our able team provides, 24 hours support seven days a week.</p>
             <a href="#" class="btn"> read more</a>
         </div>
 

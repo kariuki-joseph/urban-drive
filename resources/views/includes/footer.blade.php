@@ -4,11 +4,11 @@
 
 <div class="box">
     <h3>our branches</h3>
-    <a href="#"> <i class="fas fa-map-marker-alt"></i> india </a>
-    <a href="#"> <i class="fas fa-map-marker-alt"></i> japan </a>
-    <a href="#"> <i class="fas fa-map-marker-alt"></i> france </a>
-    <a href="#"> <i class="fas fa-map-marker-alt"></i> russia </a>
-    <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+    <a href="#"> <i class="fas fa-map-marker-alt"></i> Nairobi </a>
+    <a href="#"> <i class="fas fa-map-marker-alt"></i> Kiambbu </a>
+    <a href="#"> <i class="fas fa-map-marker-alt"></i> Nyeri </a>
+    <a href="#"> <i class="fas fa-map-marker-alt"></i> Nakuru </a>
+    <a href="#"> <i class="fas fa-map-marker-alt"></i> Meru </a>
 </div>
 
 <div class="box">

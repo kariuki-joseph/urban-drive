@@ -63,6 +63,21 @@
     </form>
 
 </div>
+<div class="login-form-container">
+
+    <span id="close-login-form" class="fas fa-times"></span>
+
+    <form action="">
+        <h3>User login</h3>
+        <input type="email" placeholder="email" class="box">
+        <input type="password" placeholder="password" class="box">
+        <input type="submit" value="login" class="btn">
+       
+       
+        <p> forget your password <a href="#">click here</a> </p>
+    </form>
+
+</div>
 
 <div class="register-form-container">
 
