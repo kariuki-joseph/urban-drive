@@ -43,7 +43,7 @@ Route::put('/contact/{id}','ContactController@update');
 Route::delete('/contact/{id}','ContactController@destroy');
 //admin route
 Route::get('/admin', "AdminController@index");
-
+Route::get('/admin/login', 'AdminController@login');
                                                                                                                                                                                         
 
 

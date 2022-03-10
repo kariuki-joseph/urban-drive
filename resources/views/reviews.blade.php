@@ -12,7 +12,7 @@
                 <div class="content">
                 <p>A was able to purchase my first dream car from this site and I 
                         received te best customer care services that i really appreciate.this the best site to get a car</p>
-                    <h3>JAMES MASAARA</h3>
+                    <h3>JAMES MASARA</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -129,7 +129,7 @@
                                 <input type="text" name="reviewemail" class="form-control" id="carName" placeholder="Enter your Email">
                               </div> 
                               <label  class="form-label">ADD REVIEW</label>
-                              <textarea name="review" id="review" cols="30"c rows="10" class="form-control " placeholder="Add your review here----" ></textarea>
+                              <textarea name="review" id="review" cols="30"c rows="10" class="form-control " placeholder="Add your review here...." ></textarea>
                               </div> 
                          </div>
                          <div class="modal-footer">

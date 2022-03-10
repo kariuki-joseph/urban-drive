@@ -699,3 +699,7 @@ section{
 nav.navbar .active{
     color: var(--yellow)
 }
+.search-form input{
+    height:40px; 
+    border-radius:8px
+}

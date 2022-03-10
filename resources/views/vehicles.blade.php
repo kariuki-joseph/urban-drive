@@ -1,14 +1,17 @@
 @include('includes.header')
 <section class="vehicles" id="vehicles">
-
-    <h1 class="heading"> AVAILABLE <span>VEHICLES</span> </h1>
-    <div class="container"
-    >
-    <form class="example" action="action_page.php">
-       <input type="text" placeholder="Search.." name="search">
-         <button type="submit"><i class="fa fa-search"></i></button> 
-       </form>
-
+   
+    <h1 class="heading mt-3"> AVAILABLE <span>VEHICLES</span> </h1>
+    <div class="row my-3">
+    <div class="container">
+        <form action="" class="search-form">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg"  placeholder="Search your favourite vehicle here...">
+            <button type="submit" class="input-group-text btn-success"><i class="bi bi-search me-2"></i> Search</button>
+        </div>
+        </form>
+    </div>
+    </div>
     <div class="swiper vehicles-slider">
 
         <div class="swiper-wrapper">

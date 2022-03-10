@@ -14,7 +14,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 <body>
@@ -51,7 +51,7 @@
         <input type="password" placeholder="password" class="box">
         <input type="submit" value="login" class="btn">
        
-        <p> For admin login <a href="/admin">click here</a> </p>
+        <p> For admin login <a href="/admin/login">click here</a> </p>
 
         <p> don't have an account <a href="#" id="btn-register">create one</a> </p>
     </form>
