@@ -703,3 +703,9 @@ nav.navbar .active{
     height:40px; 
     border-radius:8px
 }
+#myModal1{
+    font-size: 2rem;
+}
+#myModal1 input,#myModal1 textarea {
+    font-size: 1.5rem;
+}
