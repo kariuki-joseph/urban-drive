@@ -20,7 +20,7 @@
                 <img src="/assets/image/vehicle-1.png" alt="">
                 <div class="content">
                     <h3>new model</h3>
-                    <div class="price"> <span>price : </span> $62,000/- </div>
+                    <div class="price"> <span>price : </span> ksh 852,000/- </div>
                     <p>
                         new
                         <span class="fas fa-circle"></span> 2021
@@ -36,7 +36,7 @@
                 <img src="/assets/image/vehicle-2.png" alt="">
                 <div class="content">
                     <h3>new model</h3>
-                    <div class="price"> <span>price : </span> $62,000/- </div>
+                    <div class="price"> <span>price : </span> ksh 1,000,000 </div>
                     <p>
                         new
                         <span class="fas fa-circle"></span> 2021
@@ -52,7 +52,7 @@
                 <img src="/assets/image/vehicle-3.png" alt="">
                 <div class="content">
                     <h3>new model</h3>
-                    <div class="price"> <span>price : </span> $62,000/- </div>
+                    <div class="price"> <span>price : </span> Ksh. 1200,000/- </div>
                     <p>
                         new
                         <span class="fas fa-circle"></span> 2021
@@ -68,7 +68,7 @@
                 <img src="/assets/image/vehicle-4.png" alt="">
                 <div class="content">
                     <h3>new model</h3>
-                    <div class="price"> <span>price : </span> $62,000/- </div>
+                    <div class="price"> <span>price : </span> Ksh. 900,000/- </div>
                     <p>
                         new
                         <span class="fas fa-circle"></span> 2021
@@ -84,7 +84,7 @@
                 <img src="/assets/image/vehicle-5.png" alt="">
                 <div class="content">
                     <h3>new model</h3>
-                    <div class="price"> <span>price : </span> $62,000/- </div>
+                    <div class="price"> <span>price : </span> Ksh. 3,500,000/- </div>
                     <p>
                         new
                         <span class="fas fa-circle"></span> 2021
@@ -100,7 +100,7 @@
                 <img src="/assets/image/vehicle-6.png" alt="">
                 <div class="content">
                     <h3>new model</h3>
-                    <div class="price"> <span>price : </span> $62,000/- </div>
+                    <div class="price"> <span>price : </span> Ksh. 950,000 </div>
                     <p>
                         new
                         <span class="fas fa-circle"></span> 2021
