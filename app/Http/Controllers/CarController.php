@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class CarController extends Controller
 {
+    //GET all
     public function index(){
         return view('vehicles');
     }

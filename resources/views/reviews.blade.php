@@ -10,8 +10,9 @@
             <div class="swiper-slide box">
                 <img src="assets/image/pic-1.png" alt="">
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                    <h3>john deo</h3>
+                <p>A was able to purchase my first dream car from this site and I 
+                        received te best customer care services that i really appreciate.this the best site to get a car</p>
+                    <h3>JAMES MASAARA</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -25,8 +26,9 @@
             <div class="swiper-slide box">
                 <img src="assets/image/pic-2.png" alt="">
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                    <h3>john deo</h3>
+                <p>This is the best website to acquir a brand new car especially for beginners who might be ignorant when it come to this.
+</p>
+                    <h3>DAVID MUGO</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -40,8 +42,9 @@
             <div class="swiper-slide box">
                 <img src="assets/image/pic-3.png" alt="">
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                    <h3>john deo</h3>
+                    <p>A was able to purchase my first dream car from this site and I 
+                        received te best customer care services that i really appreciate.this the best site to get a car</p>
+                    <h3>John Kamau</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -55,8 +58,9 @@
             <div class="swiper-slide box">
                 <img src="assets/image/pic-4.png" alt="">
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                    <h3>john deo</h3>
+                    <p>This is the best website to acquir a brand new car especially for beginners who might be ignorant when it come to this.
+</p>
+                    <h3>DAVID MUGO</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -70,8 +74,8 @@
             <div class="swiper-slide box">
                 <img src="assets/image/pic-5.png" alt="">
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                    <h3>john deo</h3>
+                    <p>I do not have a single of regret  after purshaching my gilfrend a car from urban cars .Urban car continue with the quality service and cars that you offeR</p>
+                    <h3>JOSEPH NJENGA</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -85,8 +89,9 @@
             <div class="swiper-slide box">
                 <img src="assets/image/pic-6.png" alt="">
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                    <h3>john deo</h3>
+                <p>This is the best website to acquir a brand new car especially for beginners who might be ignorant when it come to this.
+</p>
+                    <h3>LYDIA LEMARIMBE</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -124,7 +129,7 @@
                                 <input type="text" name="reviewemail" class="form-control" id="carName" placeholder="Enter your Email">
                               </div> 
                               <label  class="form-label">ADD REVIEW</label>
-                              <textarea name="review" id="review" cols="30"c rows="10" class="form-control bg-dark"></textarea>
+                              <textarea name="review" id="review" cols="30"c rows="10" class="form-control " placeholder="Add your review here----" ></textarea>
                               </div> 
                          </div>
                          <div class="modal-footer">

@@ -9,8 +9,7 @@
          <button type="submit"><i class="fa fa-search"></i></button> 
        </form>
 
-    </div>
-         <div class="swiper vehicles-slider">
+    <div class="swiper vehicles-slider">
 
         <div class="swiper-wrapper">
 

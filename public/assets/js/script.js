@@ -1,57 +1,57 @@
-let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.navbar');
+let menu = $('#menu-btn');
+let navbar = $('.navbar');
 
-menu.onclick = () =>{
-  menu.classList.toggle('fa-times');
-  navbar.classList.toggle('active');
+let path = window.location.pathname.substring(1);
+if(path == ""){
+  $("nav.navbar #home").addClass('active');
+}else{
+  $(`nav.navbar #${path}`).addClass('active');
 }
 
-document.querySelector('#login-btn').onclick = () =>{
-  document.querySelector('.login-form-container').classList.toggle('active');
-}
+menu.click(function(){
+  $(menu).toggleClass('fa-times');
+  $(navbar).toggleClass('active');
+})
 
-document.querySelector('#close-login-form').onclick = () =>{
-  document.querySelector('.login-form-container').classList.remove('active');
-}
+$('#login-btn').click(()=>{
+  $('.login-form-container').toggleClass('active');
+})
 
-window.onscroll = () =>{
+$('#close-login-form').click(() =>{
+  $('.login-form-container').removeClass('active');
+})
 
-  menu.classList.remove('fa-times');
-  navbar.classList.remove('active');
+$('#btn-register').click(()=>{
+  $('#formLogin').addClass('d-none');
+  $('#formRegister').removeClass('d-none');
+})
+$('#btn-login').click(()=>{
+  $('#formLogin').removeClass('d-none');
+  $('#formRegister').addClass('d-none');
+})
+$('.home').on('mousemove', (e) =>{
 
-  if(window.scrollY > 0){
-    document.querySelector('.header').classList.add('active');
-  }else{
-    document.querySelector('.header').classList.remove('active');
-  };
+  $('.home-parallax').each(function(){
 
-};
-
-document.querySelector('.home').onmousemove = (e) =>{
-
-  document.querySelectorAll('.home-parallax').forEach(elm =>{
-
-    let speed = elm.getAttribute('data-speed');
+    let speed = $(this).attr('data-speed');
 
     let x = (window.innerWidth - e.pageX * speed) / 90;
     let y = (window.innerHeight - e.pageY * speed) / 90;
 
-    elm.style.transform = `translateX(${y}px) translateY(${x}px)`;
+    $(this).css('transform', `translateX(${y}px) translateY(${x}px)`);
 
   });
 
-};
+});
 
 
-document.querySelector('.home').onmouseleave = (e) =>{
+$('.home').on('mouseleave',(e) =>{
 
-  document.querySelectorAll('.home-parallax').forEach(elm =>{
-
-    elm.style.transform = `translateX(0px) translateY(0px)`;
-
+  $('.home-parallax').each(function(){
+    $(this).css('transform',`translateX(0px) translateY(0px)`);
   });
 
-};
+});
 
 var swiper = new Swiper(".vehicles-slider", {
   grabCursor: true,
