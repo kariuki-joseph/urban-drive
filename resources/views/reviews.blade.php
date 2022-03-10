@@ -124,7 +124,7 @@
                                 <input type="text" name="reviewemail" class="form-control" id="carName" placeholder="Enter your Email">
                               </div> 
                               <label  class="form-label">ADD REVIEW</label>
-                              <textarea name="review" id="review" cols="30"c rows="10" class="form-control bg-dark"></textarea>
+                              <textarea name="review" id="review" cols="30" rows="10" class="form-control" placeholder="Add your review here...."></textarea>
                               </div> 
                          </div>
                          <div class="modal-footer">

@@ -5,7 +5,7 @@ let path = window.location.pathname.substring(1);
 if(path == ""){
   $("nav.navbar #home").addClass('active');
 }else{
-  $(`nav.navbar #${path}`).addClass('active');
+  // $(`nav.navbar #${path}`).addClass('active');
 }
 
 menu.click(function(){
