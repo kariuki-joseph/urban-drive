@@ -41,12 +41,15 @@ Route::get('/contact/{id}', 'ContactController@show');
 Route::post('/contact','ContactController@store');
 Route::put('/contact/{id}','ContactController@update');
 Route::delete('/contact/{id}','ContactController@destroy');
+//admin route
+Route::get('/admin', "AdminController@index");
+
+                                                                                                                                                                                        
+
+
 
 //home routes
 Route::get('/{id}', 'HomeController@show');
 Route::post('/', 'HomeController@store');
 Route::put('/{id}','HomeController@update');
 Route::delete('/{id}','HomeController@destroy');
-
-
-                                                                                                                                                                                        

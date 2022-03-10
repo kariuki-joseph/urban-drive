@@ -1,7 +1,7 @@
 @include('includes.header')
 <section class="vehicles" id="vehicles">
 
-    <h1 class="heading"> popular <span>vehicles</span> </h1>
+    <h1 class="heading"> AVAILABLE <span>VEHICLES</span> </h1>
 
     <div class="swiper vehicles-slider">
 
