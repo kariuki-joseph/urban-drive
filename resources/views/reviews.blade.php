@@ -122,19 +122,17 @@
                         </div>
                          <div class="modal-body">
                          <div class="mb-3">
-                                <label  class="form-label">YOUR Name</label>
+                                <label  class="form-label">Your Name</label>
                                 <input type="text" name="reviewName" class="form-control" id="carName" placeholder="Enter your name">
                               </div> 
-                              <label  class="form-label">YOUR Email</label>
+                              <label  class="form-label">Your Email</label>
                                 <input type="text" name="reviewemail" class="form-control" id="carName" placeholder="Enter your Email">
                               </div> 
-                              <label  class="form-label">ADD REVIEW</label>
-                              <textarea name="review" id="review" cols="30"c rows="10" class="form-control " placeholder="Add your review here...." ></textarea>
+                              <label  class="form-label">Your Review</label>
+                              <textarea name="review" id="review" cols="20" rows="5" class="form-control " placeholder="Add your review here...." ></textarea>
                               </div> 
-                         </div>
-                         <div class="modal-footer">
-                          <a class=" btn btn-danger"  href="">SUBMIT</a>        
-                          <a href="" class=" btn btn-primary" >CANCEL</a>        
+                              <a href="" class=" btn btn-primary" >CANCEL <i class="fa fa-window-close"></i></a>   
+                              <a class=" btn btn-danger float-right"  href="">SUBMIT <i class="fa fa-paper-plane"></i></a>        
                          </div>
                        </div>
                      </div>
