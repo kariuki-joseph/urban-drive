@@ -18,7 +18,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="price">$55,000/-</div>
+                    <div class="price">ksh 1,200,000</div>
                     <a href="#" class="btn">check out</a>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="price">$55,000/-</div>
+                    <div class="price">ksh 1,200,000</div>
                     <a href="#" class="btn">check out</a>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="price">$55,000/-</div>
+                    <div class="price">ksh 1,200,000</div>
                     <a href="#" class="btn">check out</a>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="price">$55,000/-</div>
+                    <div class="price">ksh 1,200,000</div>
                     <a href="#" class="btn">check out</a>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                          <i class="fas fa-star"></i>
                          <i class="fas fa-star-half-alt"></i>
                      </div>
-                     <div class="price">$55,000/-</div>
+                     <div class="price">ksh 1,200,000</div>
                      <a href="#" class="btn">check out</a>
                  </div>
              </div>
@@ -108,7 +108,7 @@
                          <i class="fas fa-star"></i>
                          <i class="fas fa-star-half-alt"></i>
                      </div>
-                     <div class="price">$55,000/-</div>
+                     <div class="price">ksh 1,200,000</div>
                      <a href="#" class="btn">check out</a>
                  </div>
              </div>
@@ -124,7 +124,7 @@
                          <i class="fas fa-star"></i>
                          <i class="fas fa-star-half-alt"></i>
                      </div>
-                     <div class="price">$55,000/-</div>
+                     <div class="price">ksh 1,200,000</div>
                      <a href="#" class="btn">check out</a>
                  </div>
              </div>
@@ -140,7 +140,7 @@
                          <i class="fas fa-star"></i>
                          <i class="fas fa-star-half-alt"></i>
                      </div>
-                     <div class="price">$55,000/-</div>
+                     <div class="price">ksh 1,200,000</div>
                      <a href="#" class="btn">check out</a>
                  </div>
              </div>
