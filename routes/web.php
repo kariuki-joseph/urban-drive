@@ -44,7 +44,12 @@ Route::delete('/contact/{id}','ContactController@destroy');
 //admin route
 Route::get('/admin', "AdminController@index");
 Route::get('/admin/login', 'AdminController@login');
-                                                                                                                                                                                        
+Route::get('/admin/featured', 'AdminController@featured');
+Route::get('/admin/trial', 'AdminController@admintrial');
+Route::get('/admin/orders', 'AdminController@orders');
+Route::get('/admin/reviews', 'AdminController@reviews');
+
+                                                                                                                                                                                      
 
 
 
