@@ -7,14 +7,11 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index(){
-        return view ('adminviews.admin');
+        return view ('adminviews.dashboard');
     }
 
     public function login(){
-        return view('admin.admin-login');
-    }
-    public function admintrial(){
-        return view ('adminviews.sample');
+        return view('adminviews.admin-login');
     }
     public function featured(){
         return view('adminviews.featured');

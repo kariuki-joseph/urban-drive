@@ -10,7 +10,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="{{'/admin/trial'}}">
+    <a class="nav-link" href="{{'/admin'}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>   
@@ -34,7 +34,9 @@
     <a class="nav-link" href="{{'/admin/reviews'}}">
         <i class="fas fa-fw fa-folder"></i>
         <span>Clients reviews</span></a>
-</li>>
+</li>
+<hr class="sidebar-divider bg-success">
+
 
 
 

@@ -5,8 +5,7 @@
 
 <div class="row">
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15958.888570710844!2d36.9609217!3d-0.3978314!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7ae4dae9615396a6!2sDEDAN%20KIMATHI%20UNIVERSITY%20OF%20TECHNOLOGY!5e0!3m2!1sen!2ske!4v1646897161142!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <form action="">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127670.42232412015!2d36.88266063602857!3d-0.4399544712879931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18285dfed09e0ebf%3A0x829716f702f65e9e!2sNyeri!5e0!3m2!1sen!2ske!4v1647343044358!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    <form action="">
         <h3>get in touch</h3>
         <input type="text" placeholder="your name" class="box">
         <input type="email" placeholder="your email" class="box">
