@@ -22,4 +22,7 @@ class AdminController extends Controller
     public function reviews(){
         return view('adminviews.reviews');
     }
+    public function message(){
+        return view('adminviews.message');
+    }
 }

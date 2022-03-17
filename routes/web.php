@@ -48,6 +48,7 @@ Route::get('/admin/featured', 'AdminController@featured');
 Route::get('/admin/trial', 'AdminController@admintrial');
 Route::get('/admin/orders', 'AdminController@orders');
 Route::get('/admin/reviews', 'AdminController@reviews');
+Route::get('/admin/message', 'AdminController@message');
 
                                                                                                                                                                                       
 

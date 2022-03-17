@@ -3,7 +3,6 @@
 
 <!-- Sidebar - Brand -->
 
-
 <!-- Divider -->
 <hr class="sidebar-divider">
 <hr class="sidebar-divider">
@@ -36,10 +35,13 @@
         <span>Clients reviews</span></a>
 </li>
 <hr class="sidebar-divider bg-success">
-
-
-
-
+<li class="nav-item active">
+    <a class="nav-link" href="{{'/admin/message'}}">
+        <i class="fas fa-fw fa-envelope fa-fw "></i>
+        <span class="badge badge-danger badge-counter">7</span>
+        <span>Message center</span></a>
+</li>
+<hr class="sidebar-divider bg-success">
 
 </ul>
 <!-- End of Sidebar -->

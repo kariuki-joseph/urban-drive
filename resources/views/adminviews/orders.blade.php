@@ -23,6 +23,9 @@
                @include('adminviews.topbar')
              
                <section class="">
+                 <h4>
+                   YOUR ORDERS
+                 </h4>
             <table class="table">
       
               <thead class="thread-light">
@@ -42,7 +45,7 @@
                   <td>63253</td>
                 <td>
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal1">
-                    <i class="fa-solid fa-check"> Attended
+                   Attended
                     </button>
                     
                   </td>
