@@ -1,8 +1,9 @@
 @include('includes.header')
 <div class="login-form-container active">
-    <form  id="formAdminLogin" method="GET" action="/admin">
+    <form  id="formAdminLogin" method="POST" action="/admin/login">
         <h3>URBAN DRIVE ADMIN LOGIN</h3>
-        <input type="password" placeholder="password" class="box">
+        <input type="email" name="email" id="">
+        <input type="password" name="password" placeholder="password" class="box">
         <input type="submit" value="login" class="btn">
     </form>
 </div>
