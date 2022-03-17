@@ -25,10 +25,10 @@
 
          <div class="container">
       <div class="row">
-            <section class="col-8 border">
+            <section class="col-8 border border-warning">
             <table class="table">
       
-              <thead class="thread-light">
+              <thead class="bg-warning">
                 <tr>
                   <th scope="col">Car ID</th>
                   <th scope="col">Car model</th>
@@ -46,39 +46,55 @@
                   <td><img src="/assets/image/vehicle-5.png" heigth="200px" width="100px" alt=""></td>
                   <td>800,000ksh</td>
                   <td>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal1">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
                       Edit
                  </button>          
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>D54</td>
+                  <td>Toyota </td>
+                  <td>V8 2022 Hall</td>
+                  <td><img src="/assets/image/download.jpeg" heigth="200px" width="100px" alt=""></td>
+                  <td>5,000,000ksh</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal1">
+                      Edit
+                    </button>
+                           
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2">
                       Delete
                     </button>
                   </td>
                 </tr>
-                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
                      <div class="modal-dialog" role="document">
                        <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
+                         <div class="modal-header bg-warning" style="postion:relative">
                             <h1>EDIT CAR INFORMATION</h1>
                         </div>
                          <div class="modal-body">
-                         <form action="" method="#">
+                         <form action="" method="#" class="border border-warning">
                              <div class="mb-3">
-                                <label class="form-label">Car id</label>
+                                <label class="text-gray form-label">Car id</label>
                                 <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
                               <div class="mb-3">
-                                <label class="form-label">Car Model</label>
+                                <label class="text-gray form-label">Car Model</label>
                                 <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
                               </div>
                               <div class="mb-3">
-                                <label  class="form-label">Car Name</label>
+                                <label  class="text-gray form-label">Car Name</label>
                                 <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
                               </div>              
                               <div class="mb-3">
-                                 <label class="form-label">Image</label>
+                                 <label class="text-gray form-label">Image</label>
                                 <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
                               </div>
                               <div class="mb-3">
-                                <label  class="form-label">Speciality</label>
+                                <label  class="text-gray form-label">Speciality</label>
                                 <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
                               </div>
                             </form>
@@ -90,7 +106,44 @@
                        </div>
                      </div>
                    </div>
-                   <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
+                
+              </tbody>
+            </table>  
+          </section>
+         <section class="col-4 border border-warning">
+           <form action="" method="">
+              
+              <div class="mb-3">
+                <label class="text-gray form-label">Car id</label>
+                <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
+              <div class="mb-3">
+                <label class="text-gray form-label">Car Model</label>
+                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
+              </div>
+              <div class="mb-3">
+                <label  class="text-gray form-label">Car Name</label>
+                <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
+              </div>
+              
+              <div class="mb-3">
+                <label class="text-gray form-label">Image</label>
+                <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
+              </div>
+              <div class="mb-3">
+                <label  class="text-gray form-label">Speciality</label>
+                <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
+              </div>
+                            
+              <button type="submit" class="btn btn-primary" name="save">Submit</button>
+              <button type="submit" class="btn btn-secondary">Reset</button>
+            </form>
+         </section>
+    </div>
+  
+      </div>
+                
+    </div>
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
                      <div class="modal-dialog" role="document">
                        <div class="modal-content">
                          <div class="modal-header" style="postion:relative">
@@ -105,47 +158,11 @@
                          </div>
                          <div class="modal-footer">
                           <a class=" btn btn-danger"  href="">Yes</a>        
-                          <a href="" class=" btn btn-primary" >No</a>        
+                          <a href="" class=" btn btn-primary bg-warning" >No</a>        
                          </div>
                        </div>
                      </div>
-                   </div>  
-              </tbody>
-            </table>  
-          </section>
-         <section class="col-4 border">
-           <form action="" method="">
-              
-              <div class="mb-3">
-                <label class="form-label">Car id</label>
-                <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
-              <div class="mb-3">
-                <label class="form-label">Car Model</label>
-                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
-              </div>
-              <div class="mb-3">
-                <label  class="form-label">Car Name</label>
-                <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
-              </div>
-              
-              <div class="mb-3">
-                <label class="form-label">Image</label>
-                <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
-              </div>
-              <div class="mb-3">
-                <label  class="form-label">Speciality</label>
-                <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
-              </div>
-                            
-              <button type="submit" class="btn btn-primary" name="save">Submit</button>
-              <button type="submit" class="btn btn-secondary">Reset</button>
-            </form>
-         </section>
-    </div>
-  
-      </div>
-                
-    </div>
+                   </div>   
     <!-- End of Page Wrapper -->
 
    

@@ -20,16 +20,16 @@
             <!-- Main Content -->
             <div id="content">
             @include('adminviews.topbar')
-             <h3>
+             <h3 class="bg-warning">
                  FEATURED CARS
              </h3>
 
          <div class="container">
       <div class="row">
-            <section class="col-8 border">
+            <section class="col-8 border border-warning">
             <table class="table">
       
-              <thead class="thread-light">
+              <thead class="bg-warning">
                 <tr>
                 <th scope="col">Car Id</th>
                   <th scope="col">Car model</th>
@@ -71,15 +71,15 @@
                       Delete
                     </button>
                   </td>
-                </tr>
+                  
                 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
                      <div class="modal-dialog" role="document">
                        <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
-                            <h1>EDIT CAR INFORMATION</h1>
+                         <div class="modal-header bg-warning" style="postion:relative">
+                            <h1 >EDIT CAR INFORMATION</h1>
                         </div>
                          <div class="modal-body">
-                         <form action="" method="#">
+                         <form action="" method="#" class="border border-warning">
                              <div class="mb-3">
                                 <label class="form-label">Car id</label>
                                 <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
@@ -108,32 +108,10 @@
                        </div>
                      </div>
                    </div>
-                   <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
-                             <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                         <div class="modal-body">
-                            <span class="text-dark">
-                           Are sure you want to  delete this car?
-                         </span>
-                         </div>
-                         <div class="modal-footer">
-                          <a class=" btn btn-danger"  href="">Yes</a>        
-                          <a href="" class=" btn btn-primary" >No</a>        
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                     </div>
-  
               </tbody>
             </table>  
           </section>
-         <section class="col-4 border">
+         <section class="col-4 border border-warning">
            <form action="" method="POST">
               
               <div class="mb-3">
@@ -157,7 +135,7 @@
                 <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
               </div>
                             
-              <button type="submit" class="btn btn-primary" name="save">Submit</button>
+              <button type="submit" class="btn btn-warning" name="save">Add car</button>
               <button type="submit" class="btn btn-secondary">Reset</button>
             </form>
          </section>
@@ -166,6 +144,27 @@
       </div>
                 
     </div>
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2" aria-hidden="true">
+                     <div class="modal-dialog" role="document">
+                       <div class="modal-content">
+                         <div class="modal-header" style="postion:relative">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
+                             <span aria-hidden="true">&times;</span>
+                           </button>
+                        </div>
+                         <div class="modal-body">
+                            <span class="text-dark">
+                           Are sure you want to  delete this car?
+                         </span>
+                         </div>
+                         <div class="modal-footer">
+                          <a class=" btn btn-danger"  href="">Yes</a>        
+                          <a href="" class=" btn btn-primary" >No</a>        
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                     </div>
     <!-- End of Page Wrapper -->
 
    
