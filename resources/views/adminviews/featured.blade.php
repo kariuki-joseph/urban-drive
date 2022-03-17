@@ -63,7 +63,7 @@
                   <td><img src="/assets/image/vehicle-5.png" heigth="200px" width="100px" alt=""></td>
                   <td>800,000ksh</td>
                   <td>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal1">
+                    <button type="button" class="btn-success" data-bs-toggle="modal" data-bs-target="#myModal1">
                       Edit
                     </button>
                            
