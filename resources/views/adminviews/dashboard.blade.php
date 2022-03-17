@@ -25,12 +25,12 @@
 
          <div class="container">
       <div class="row">
-            <section class="col-7">
+            <section class="col-8 border border-warning">
             <table class="table">
       
-              <thead class="thread-light">
+              <thead class="bg-warning">
                 <tr>
-                  <th scope="col">id</th>
+                  <th scope="col">Car ID</th>
                   <th scope="col">Car model</th>
                   <th scope="col">Car Name</th>
                   <th scope="col">Image</th>
@@ -40,45 +40,61 @@
               </thead>
               <tbody>      
                 <tr>
-                  <td> Car ID</td>
+                  <td> R44</td>
                   <td>Toyota </td>
                   <td>mazda 2020</td>
                   <td><img src="/assets/image/vehicle-5.png" heigth="200px" width="100px" alt=""></td>
                   <td>800,000ksh</td>
                   <td>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal1">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
                       Edit
                  </button>          
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal3">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
                       Delete
                     </button>
                   </td>
                 </tr>
-                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
+                <tr>
+                  <td>D54</td>
+                  <td>Toyota </td>
+                  <td>V8 2022 Hall</td>
+                  <td><img src="/assets/image/download.jpeg" heigth="200px" width="100px" alt=""></td>
+                  <td>5,000,000ksh</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal1">
+                      Edit
+                    </button>
+                           
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2">
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
                      <div class="modal-dialog" role="document">
                        <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
+                         <div class="modal-header bg-warning" style="postion:relative">
                             <h1>EDIT CAR INFORMATION</h1>
                         </div>
                          <div class="modal-body">
-                         <form action="" method="#">
+                         <form action="" method="#" class="border border-warning">
                              <div class="mb-3">
-                                <label class="form-label">Car id</label>
+                                <label class="text-gray form-label">Car id</label>
                                 <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
                               <div class="mb-3">
-                                <label class="form-label">Car Model</label>
+                                <label class="text-gray form-label">Car Model</label>
                                 <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
                               </div>
                               <div class="mb-3">
-                                <label  class="form-label">Car Name</label>
+                                <label  class="text-gray form-label">Car Name</label>
                                 <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
                               </div>              
                               <div class="mb-3">
-                                 <label class="form-label">Image</label>
+                                 <label class="text-gray form-label">Image</label>
                                 <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
                               </div>
                               <div class="mb-3">
-                                <label  class="form-label">Speciality</label>
+                                <label  class="text-gray form-label">Speciality</label>
                                 <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
                               </div>
                             </form>
@@ -90,71 +106,31 @@
                        </div>
                      </div>
                    </div>
-                   <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
-                             <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                         <div class="modal-body">
-                            <span class="text-dark">
-                           Are sure you want to  delete this car?
-                         </span>
-                         </div>
-                         <div class="modal-footer">
-                          <a class=" btn btn-danger"  href="">Yes</a>        
-                          <a href="" class=" btn btn-primary" >No</a>        
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
-                             <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                         <div class="modal-body">
-                            <span class="text-dark">
-                           Are sure you want to  delete this car?
-                         </span>
-                         </div>
-                         <div class="modal-footer">
-                          <a class=" btn btn-danger"  href="">Yes</a>        
-                          <a href="" class=" btn btn-primary" >No</a>        
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-  
+                
               </tbody>
             </table>  
           </section>
-         <section class="col-5">
-           <form action="" method="#">
+         <section class="col-4 border border-warning">
+           <form action="" method="">
               
               <div class="mb-3">
-                <label class="form-label">Car id</label>
+                <label class="text-gray form-label">Car id</label>
                 <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
               <div class="mb-3">
-                <label class="form-label">Car Model</label>
+                <label class="text-gray form-label">Car Model</label>
                 <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
               </div>
               <div class="mb-3">
-                <label  class="form-label">Car Name</label>
+                <label  class="text-gray form-label">Car Name</label>
                 <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
               </div>
               
               <div class="mb-3">
-                <label class="form-label">Image</label>
+                <label class="text-gray form-label">Image</label>
                 <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
               </div>
               <div class="mb-3">
-                <label  class="form-label">Speciality</label>
+                <label  class="text-gray form-label">Speciality</label>
                 <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
               </div>
                             
@@ -167,6 +143,26 @@
       </div>
                 
     </div>
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
+                     <div class="modal-dialog" role="document">
+                       <div class="modal-content">
+                         <div class="modal-header" style="postion:relative">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
+                             <span aria-hidden="true">&times;</span>
+                           </button>
+                        </div>
+                         <div class="modal-body">
+                            <span class="text-dark">
+                           Are sure you want to  delete this car?
+                         </span>
+                         </div>
+                         <div class="modal-footer">
+                          <a class=" btn btn-danger"  href="">Yes</a>        
+                          <a href="" class=" btn btn-primary bg-warning" >No</a>        
+                         </div>
+                       </div>
+                     </div>
+                   </div>   
     <!-- End of Page Wrapper -->
 
    
@@ -187,6 +183,12 @@
     <!-- Page level custom scripts -->
     <script src="/asset/s/demo/chart-area-demo.js"></script>
     <script src="/asset/js/demo/chart-pie-demo.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+
+<script src="/assets/js/script.js"></script>
 
 </body>
 

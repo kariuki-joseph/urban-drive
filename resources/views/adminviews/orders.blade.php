@@ -23,36 +23,39 @@
                @include('adminviews.topbar')
              
                <section class="">
-            <table class="table">
+                 <h4 class="bg-warning">
+                   YOUR ORDERS
+                 </h4>
+            <table class="table border border-warning">
       
-              <thead class="thread-light">
-                <tr>
-                <th scope="col">id</th>
-                  <th scope="col">User Name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Car Id</th>
-                  <th scope="col">Status</th>
+              <thead>
+                <tr  class="bg-warning">
+                <th scope="col"  class=" border border-warning">id</th>
+                  <th scope="col" class=" border border-warning">User Name</th>
+                  <th scope="col"  class=" border border-warning">Email</th>
+                  <th scope="col"  class=" border border-warning">Car Id</th>
+                  <th scope="col"  class=" border border-warning">Status</th>
                 </tr>
               </thead>
               <tbody>      
-                <tr>
-                  <td>3434</td>
-                  <td>prof </td>
-                  <td>prof@gmail.com</td>
-                  <td>63253</td>
+                <tr >
+                  <td  class=" border border-warning">3434</td>
+                  <td  class=" border border-warning">prof </td>
+                  <td  class=" border border-warning">prof@gmail.com</td>
+                  <td  class=" border border-warning">63253</td>
                 <td>
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal1">
-                    <i class="fa-solid fa-check"> Attended
+                   Attended
                     </button>
                     
                   </td>
                 </tr>
                 <tr>
-                  <td>3343</td>
-                  <td>mkadinali </td>
-                  <td>mkadinali@gmail.com</td>
-                  <td>222</td>
-                <td>
+                  <td class=" border border-warning">3343</td>
+                  <td class=" border border-warning">mkadinali </td>
+                  <td class=" border border-warning">mkadinali@gmail.com</td>
+                  <td class=" border border-warning">222</td>
+                <td class=" border border-warning">
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
                      Pending 
                     </button>

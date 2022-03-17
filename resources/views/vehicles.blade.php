@@ -131,7 +131,7 @@
                          <form action="" method="#">
                          <div class="mb-3">
                                 <label class="form-label">Car ID</label>
-                                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
+                                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Id">
                               </div>
                          <div class="mb-3">
                                 <label class="form-label">Car Model</label>
@@ -144,7 +144,7 @@
                             </form>
                          </div>
                          <div class="modal-footer">
-                         <button type="submit" class="btn btn-primary" name="save">BOOK</button>
+                         <button type="submit" class="btn btn-primary " name="save">BOOK <i class="fa fa-paper-plane"></i></button>
                          <button type="submit" class="btn btn-secondary">CANCEL</button>      
                          </div>
                        </div>

@@ -38,4 +38,7 @@ class AdminController extends Controller
             redirect()->back()->with('error', 'Unable to verify your credentials. Please try again.');
         }
     }
+    public function message(){
+        return view('adminviews.message');
+    }
 }
