@@ -30,7 +30,6 @@ $('#btn-login').click(()=>{
   $('#formRegister').addClass('d-none');
 })
 $('.home').on('mousemove', (e) =>{
-
   $('.home-parallax').each(function(){
 
     let speed = $(this).attr('data-speed');
@@ -41,7 +40,6 @@ $('.home').on('mousemove', (e) =>{
     $(this).css('transform', `translateX(${y}px) translateY(${x}px)`);
 
   });
-
 });
 
 
@@ -52,7 +50,85 @@ $('.home').on('mouseleave',(e) =>{
   });
 
 });
+//handle user login and registration
+$("#formLogin").submit((e)=>{
+  e.preventDefault();
+  let form = new FormData(e.target);
+    fetch('/login', {
+      method:'POST',
+      body: form
+    }).then(res=>res.json()).then(({data})=>{
+      if(data.status == true){
+        //login successful
+        $("#loginResp").text(data.message).css('color','green').show()
+        setTimeout(()=>$(".login-form-container").removeClass('active') && $("#loginResp").text('') && $(e.target).get(0).reset() && window.location.reload(), 1500);
+      }else{
+        //invalid login
+        $("#loginResp").text(data.message).css('color','red').show();
+      }
+    }).catch(err=>console.log(err))
+})
 
+//user registration
+$("#formRegister").submit((e)=>{
+  e.preventDefault();
+  let form = new FormData(e.target);
+    fetch('/register', {
+      method:'POST',
+      body: form
+    }).then(res=>res.json()).then(({data})=>{
+      if(data.status == true){
+        //registration successful
+        $("#registerResp").text(data.message).css('color','green').show()
+        setTimeout(()=>$(".login-form-container").removeClass('active') && $("#registerResp").text('') && $(e.target).get(0).reset() && window.location.reload(), 1500);
+      }else{
+        //error in registration
+        $("#registerResp").text(data.message).css('color','red').show();
+      }
+    }).catch(err=>console.log(err))
+})
+
+
+//Review form submission
+$("#reviewForm").submit((e)=>{
+  e.preventDefault();
+  let form = new FormData(e.target);
+    fetch('/reviews', {
+      method:'POST',
+      body: form
+    }).then(res=>res.json()).then(({data})=>{
+      if(data.status == true){
+        //review submitted successfull
+        $("#reviewResp").text(data.message).css('color','green').show()
+        setTimeout(()=>$("#myModal1").modal('hide') && $("#reviewResp").text('') && $(e.target).get(0).reset(), 3000);
+      }else{
+        //error in submitting request
+        $("#reviewResp").text(data.message).css('color','red').show();
+      }
+    }).catch(err=>console.log(err))
+})
+
+//Contact Form submission
+$("#formContact").submit(function(e){
+  e.preventDefault();
+  let form = new FormData(e.target);
+  // [...form.entries()].forEach(([key, val])=>{
+    //loop here through all form entries
+  // });
+    fetch('/contact', {
+      method:'POST',
+      body: form
+    }).then(res=>res.json()).then(({data})=>{
+      if(data.status == true){
+        //message sent successfully
+        $("#contactResp").text(data.message).css('color','green').show()
+        setTimeout(()=>$("#contactResp").text('') && $(e.target).get(0).reset(), 5000);
+      }else{
+        //error in submitting message
+        $("#contactResp").text(data.message).css('color','red').show();
+      }
+    }).catch(err=>console.log(err))
+})
 var swiper = new Swiper(".vehicles-slider", {
   grabCursor: true,
   centeredSlides: true,  

@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "HomeController@index");
 
 Route::get('/featured', "HomeController@featured");
+Route::post('/login', 'UserController@login');
+Route::post('/register', 'UserController@register');
+Route::get('/logout', 'UserController@logout');
 
 Route::get('/vehicles', "CarController@index");
 Route::get('/vehicles/{id}', 'CarController@show');
@@ -29,9 +32,9 @@ Route::post('/services','ServicesController@store');
 Route::put('/services/{id}','ServicesController@update');
 Route::delete('/services/{id}','ServicesController@destroy');
 
+Route::post('/reviews','ReviewController@store');
 Route::get('/reviews', "ReviewController@index");
 Route::get('/reviews/{id}', 'ReviewController@show');
-Route::post('/reviews','ReviewController@store');
 Route::put('/reviews/{id}','ReviewController@update');
 Route::delete('/reviews/{id}','ReviewController@destroy');
 
@@ -48,13 +51,4 @@ Route::get('/admin/featured', 'AdminController@featured');
 Route::get('/admin/trial', 'AdminController@admintrial');
 Route::get('/admin/orders', 'AdminController@orders');
 Route::get('/admin/reviews', 'AdminController@reviews');
-
-                                                                                                                                                                                      
-
-
-
-//home routes
-Route::get('/{id}', 'HomeController@show');
-Route::post('/', 'HomeController@store');
-Route::put('/{id}','HomeController@update');
-Route::delete('/{id}','HomeController@destroy');
+Route::post('/admin/login', 'AdminController@handleLogin');

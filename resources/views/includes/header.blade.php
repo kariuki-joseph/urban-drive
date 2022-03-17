@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
     <!-- font awesome cdn link  -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
     <link rel="stylesheet" href="/assets/css/fontawesome.all.min.css">
@@ -35,30 +35,34 @@
     </nav>
 
     <div id="login-btn">
-        <button class="btn">login</button>
+        <button class="btn">{{ session()->has('user') ? session('user')->username:"Login" }}</button>
         <i class="far fa-user"></i>
-    </div>
-
 </header> 
     
 <div class="login-form-container">
 
     <span id="close-login-form" class="fas fa-times"></span>
-
-    <form  id="formLogin" action="">
+    <!-- hide login  and register forms for logged in users-->
+    @if(!session()->has('user'))
+    <!-- Login and register handled via javascript -->
+    <form  id="formLogin" action="" >
+        @csrf
         <h3>User login</h3>
-        <input type="email" placeholder="email" class="box">
-        <input type="password" placeholder="password" class="box">
+        <h5 id="loginResp"></h5>
+        <input type="email" name="email" placeholder="email" class="box">
+        <input type="password" name="password" placeholder="password" class="box">
         <input type="submit" value="login" class="btn">
        
         <p> For admin login <a href="/admin/login">click here</a> </p>
 
-        <p> don't have an account <a href="#" id="btn-register">create one</a> </p>
+        <p> don't have an account <a href="#" id="btn-register">Register here</a> </p>
     </form>
 
     <form id="formRegister" action="" class="d-none">
+        @csrf
         <h3>User Registration</h3>
-        <input type="text" name="username" placeholder="name" class="box">
+        <h5 id="registerResp"></h5>
+        <input type="text" name="username" placeholder="username" class="box">
         <input type="tel" name="phone" placeholder="phone" class="box">
         <input type="email" name="email" placeholder="email" class="box">
         <input type="password" name="password" placeholder="password" class="box">
@@ -66,5 +70,12 @@
         
         <p> Already have an account? <a id="btn-login" href="#">login here</a> </p>
     </form>
+    @else
+        <form action="/logout" method="get">
+        <h4>You are alredy logged in. Do you wish to logout?</h4>
+        <button type="submit" name="logout" class="btn">Logout</button>
+        </form>
+    @endif
+
 
 </div>

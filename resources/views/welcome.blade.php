@@ -47,14 +47,5 @@
 </section>
 
 @include('includes.footer')
-
-
-
-
-
-
-
-
-
 </body>
 </html>
