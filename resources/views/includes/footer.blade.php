@@ -39,7 +39,7 @@
 
 </div>
 
-<div class="credit"> computer science students Dedan kimathi unviersity </div>
+<div class="credit"> &copy computer science students Dedan kimathi unviersity </div>
 
 </section>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
