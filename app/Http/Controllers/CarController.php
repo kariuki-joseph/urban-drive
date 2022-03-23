@@ -21,8 +21,7 @@ class CarController extends Controller
         $car->color=$request->color;
         $car->price=$request->price;
         
-        //("$car");
-
+        $car->images->url = 'some image';
         $car->save();
 
         return redirect()->back();

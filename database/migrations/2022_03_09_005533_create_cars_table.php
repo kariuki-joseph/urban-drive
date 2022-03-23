@@ -20,6 +20,7 @@ class CreateCarsTable extends Migration
             $table->string('type',10)->nullable();
             $table->char('color',15)->nullable();
             $table->decimal('price')->nullable();
+            $table->string('description',200)->nullable();
         });
     }
 
