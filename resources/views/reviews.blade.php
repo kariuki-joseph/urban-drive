@@ -6,23 +6,25 @@
     <div class="swiper review-slider">
 
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide box">
-                <img src="assets/image/pic-1.png" alt="">
-                <div class="content">
-                <p>A was able to purchase my first dream car from this site and I 
-                        received te best customer care services that i really appreciate.this the best site to get a car</p>
-                    <h3>JAMES MASARA</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+            @if(count($reviews))
+                @foreach($reviews as $review)
+                <div class="swiper-slide box">
+                    <img src="assets/image/pic-1.png" alt="">
+                    <div class="content">
+                    <p>A was able to purchase my first dream car from this site and I 
+                            received te best customer care services that i really appreciate.this the best site to get a car</p>
+                        <h3>JAMES MASARA</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+                @endforeach
+            @endif
             <div class="swiper-slide box">
                 <img src="assets/image/pic-2.png" alt="">
                 <div class="content">
