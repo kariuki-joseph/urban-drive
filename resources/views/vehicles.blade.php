@@ -4,11 +4,36 @@
     <h1 class="heading mt-3"> AVAILABLE <span>VEHICLES</span> </h1>
     <div class="row my-3">
     <div class="container">
-        <form action="" class="search-form">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control form-control-lg"  placeholder="Search your favourite vehicle here...">
-            <button type="submit" class="input-group-text btn-success"><i class="bi bi-search me-2"></i> Search</button>
-        </div>
+<div class="form-inline search-form" >
+  <select name="Guests" class="form-control form-control-lg"  placeholder="Model" required>
+    <option value="1">Toyota</option>
+    <option value="2">Mercedez</option>
+    <option value="3">Lamboghirni</option>
+    <option value="4">Mazda</option>
+    <option value="5">BMWW</option>
+   
+ </select>
+
+   <select name="From" class="form-control form-control-lg" placeholder="TYPE" required>
+    <option value="Dallas">Dallas</option>
+    <option value="San Diego">San Diego</option>
+    <option value="Florida">Florida</option>
+    <option value="New York">New York</option>
+	<option value="Los Angeles">Los Angeles</option>
+	<option value="Chicago">Chicago</option>
+  </select>
+   <select name="To" class="form-control form-control-lg"  placeholder="COLOR" required>
+    <option value="Chicago">Chicago</option>
+    <option value="Raleigh">Raleigh</option>
+    <option value="Atlanta">Atlanta</option>
+    <option value="Austin">Austin</option>
+	<option value="Los Angeles">Los Angeles</option>
+	<option value="Dallas">Dallas</option>
+	<option value="New York">New York</option>
+
+  </select>
+  <button type="submit" class="input-group-text btn btn-success"><i class="bi bi-search me-2"></i> Search for Vehicle</button>
+</div> 
         </form>
     </div>
     </div>

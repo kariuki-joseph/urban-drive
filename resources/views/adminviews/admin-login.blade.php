@@ -1,6 +1,7 @@
 @include('includes.header')
 <div class="login-form-container active">
     <form  id="formAdminLogin" method="POST" action="/admin/login">
+        @csrf
         <h3>URBAN DRIVE ADMIN LOGIN</h3>
         <input type="email" name="email" id="">
         <input type="password" name="password" placeholder="password" class="box">

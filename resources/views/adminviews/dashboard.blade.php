@@ -37,14 +37,17 @@
                   <th scope="col">price</th>
                   <th scope="col">Action</th>
                 </tr>
+              
               </thead>
-              <tbody>      
+              <tbody>
+              @foreach ($cars as $car)
+      
                 <tr>
-                  <td> R44</td>
-                  <td>Toyota </td>
-                  <td>mazda 2020</td>
+                  <td> {{$car->id}}</td>
+                  <td>{{$car->model}} </td>
+                  <td>{{$car->name}}</td>
                   <td><img src="/assets/image/vehicle-5.png" heigth="200px" width="100px" alt=""></td>
-                  <td>800,000ksh</td>
+                  <td>{{$car->price}}</td>
                   <td>
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
                       Edit
@@ -54,22 +57,7 @@
                     </button>
                   </td>
                 </tr>
-                <tr>
-                  <td>D54</td>
-                  <td>Toyota </td>
-                  <td>V8 2022 Hall</td>
-                  <td><img src="/assets/image/download.jpeg" heigth="200px" width="100px" alt=""></td>
-                  <td>5,000,000ksh</td>
-                  <td>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
-                      Edit
-                    </button>
-                           
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2">
-                      Delete
-                    </button>
-                  </td>
-                </tr>
+                @endforeach
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
                      <div class="modal-dialog" role="document">
                        <div class="modal-content">
@@ -111,30 +99,42 @@
             </table>  
           </section>
          <section class="col-4 border border-warning">
-           <form action="" method="">
-              
+           <form action="{{url('/addcar')}}" method="POST">
+              @csrf
               <div class="mb-3">
                 <label class="text-gray form-label">Car id</label>
-                <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
+                <input type="text" name="id" class="form-control" id="carId" placeholder="Enter Car id">
               <div class="mb-3">
                 <label class="text-gray form-label">Car Model</label>
-                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
+                <input type="text" name="model" class="form-control" id="carModel" placeholder="Enter Car Model">
               </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">Car Name</label>
-                <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
+                <input type="text" name="name" class="form-control" id="carName" placeholder="Enter car name">
               </div>
               
               <div class="mb-3">
                 <label class="text-gray form-label">Image</label>
-                <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
+                <input type="file" name="age" class="form-control" name="image" id="image" placeholder="select image car">
               </div>
               <div class="mb-3">
-                <label  class="text-gray form-label">Speciality</label>
-                <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
+                <label  class="text-gray form-label">Type</label>
+                <input type="text" name="type" class="form-control" id="type" placeholder="Enter your type">
+              </div>
+              <div class="mb-3">
+                <label class="text-gray form-label">Color</label>
+                <input type="text" name="age" class="form-control" name="color" id="color" placeholder="select car color">
+              </div>
+              <div class="mb-3">
+                <label  class="text-gray form-label">price</label>
+                <input type="number" name="price" class="form-control" id="price" placeholder="Enter the price ">
+              </div>
+              <div class="mb-3">
+                <label  class="text-gray form-label">Description</label>
+                <textarea name="descripton" id="description" cols="20" rows="5" class="form-control " placeholder="Add your car description  here...." ></textarea>
               </div>
                             
-              <button type="submit" class="btn btn-primary" name="save">Submit</button>
+              <button type="submit" class="btn btn-warning" name="save">Submit</button>
               <button type="submit" class="btn btn-secondary">Reset</button>
             </form>
          </section>

@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Car;
 
 class AdminController extends Controller
 {
     public function index(){
-        return view ('adminviews.dashboard');
+        $cars=Car::all();
+
+return view('adminviews.dashboard',compact('cars'));
     }
+    
 
     public function login(){
         return view('adminviews.admin-login');

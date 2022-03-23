@@ -22,7 +22,7 @@ Route::get('/logout', 'UserController@logout');
 
 Route::get('/vehicles', "CarController@index");
 Route::get('/vehicles/{id}', 'CarController@show');
-Route::post('/vehicles', 'CarController@store');
+Route::post('/addcar', 'CarController@store');
 Route::put('/{id}','CarController@update');
 Route::delete('/{id}', 'CarController@destroy');
 

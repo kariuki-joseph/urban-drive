@@ -4,7 +4,7 @@
 
     <h3 data-speed="-2" class="home-parallax">find your car</h3>
 
-    <img data-speed="5" class="home-parallax" src="assets/image/home-img.png" alt="">
+    <img data-speed="5" class="" src="assets/image/home-img.png" alt="">
 
     <a data-speed="7" href="#" class="btn home-parallax">explore cars</a>
 
