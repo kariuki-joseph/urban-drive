@@ -1,3 +1,4 @@
+die(offers)
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,37 +41,23 @@
                 </tr>
               </thead>
               <tbody>      
-                <tr>
-                  <td> R33</td>
-                  <td>Lexus </td>
-                  <td>Harrier 2020</td>
-                  <td><img src="/assets/image/vehicle-3.png" heigth="200px" width="100px" alt=""></td>
-                  <td>1,200,000ksh</td>
-                  <td>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal1">
-                      Edit
-                    </button>
-                           
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2">
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>T23</td>
-                  <td>Toyota </td>
-                  <td>mazda 2020</td>
-                  <td><img src="/assets/image/vehicle-5.png" heigth="200px" width="100px" alt=""></td>
-                  <td>800,000ksh</td>
-                  <td>
-                    <button type="button" class="btn-" data-bs-toggle="modal" data-bs-target="#myModal1">
-                      Edit
-                    </button>
-                           
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2">
-                      Delete
-                    </button>
-                  </td>
+        @foreach ($offers as $offer)
+        <tr>
+        <td>{{$offer->model}}</td>
+        <td>{{$offer->name}} </td>
+        <td>{{$offer->price}}</td>
+        <td><img src="/assets/image/vehicle-5.png" heigth="200px" width="100px" alt=""></td>
+        <td>xc</td>
+        <td>
+          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
+            Edit
+       </button>          
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
+            Delete
+          </button>
+        </td>
+      </tr>
+      @endforeach
                   
                 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
                      <div class="modal-dialog" role="document">
@@ -102,40 +89,53 @@
                             </form>
                          </div>
                          <div class="modal-footer">
-                         <button type="submit" class="btn btn-warning" name="save">Add Car</button>
+                         <button type="submit" class="btn btn-warning" name="save">Edit Car</button>
                          <button type="submit" class="btn btn-secondary">Reset</button>      
                          </div>
                        </div>
                      </div>
                    </div>
+                   
               </tbody>
             </table>  
           </section>
          <section class="col-4 border border-warning">
-           <form action="" method="POST">
+         <form action="{{url('/featured/add')}}" method="POST" enctype="multipart/form-data">
+              @csrf
+              <div class="mb-3">
+                <label class="text-gray form-label">Car id</label>
+                <input type="text" name="id" class="form-control" id="carId" placeholder="Enter Car id">
+              <div class="mb-3">
+                <label class="text-gray form-label">Car Model</label>
+                <input type="text" name="model" class="form-control" id="carModel" placeholder="Enter Car Model">
+              </div>
+              <div class="mb-3">
+                <label  class="text-gray form-label">Car Name</label>
+                <input type="text" name="name" class="form-control" id="carName" placeholder="Enter car name">
+              </div>
               
               <div class="mb-3">
-                <label class="form-label">Car id</label>
-                <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
-              <div class="mb-3">
-                <label class="form-label">Car Model</label>
-                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
+                <label class="text-gray form-label">Image</label>
+                <input type="file" name="image" class="form-control" name="image" id="image" placeholder="select image car">
               </div>
               <div class="mb-3">
-                <label  class="form-label">Car Name</label>
-                <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
-              </div>
-              
-              <div class="mb-3">
-                <label class="form-label">Image</label>
-                <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
+                <label  class="text-gray form-label">Type</label>
+                <input type="text" name="type" class="form-control" id="type" placeholder="Enter your type">
               </div>
               <div class="mb-3">
-                <label  class="form-label">Speciality</label>
-                <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
+                <label class="text-gray form-label">Color</label>
+                <input type="text" name="color" class="form-control" name="color" id="color" placeholder="select car color">
+              </div>
+              <div class="mb-3">
+                <label  class="text-gray form-label">price</label>
+                <input type="number" name="price" class="form-control" id="price" placeholder="Enter the price ">
+              </div>
+              <div class="mb-3">
+                <label  class="text-gray form-label">Description</label>
+                <textarea name="descripton" id="description" cols="20" rows="5" class="form-control " placeholder="Add your car description  here...." ></textarea>
               </div>
                             
-              <button type="submit" class="btn btn-warning" name="save">Add car</button>
+              <button type="submit" class="btn btn-warning" name="save">Submit</button>
               <button type="submit" class="btn btn-secondary">Reset</button>
             </form>
          </section>

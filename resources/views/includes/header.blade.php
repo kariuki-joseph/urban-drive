@@ -19,7 +19,7 @@
 </head>
 <body>
     
-<header class="header bg-warning">
+<header class="header" style=" background-color: #a28e0c;">
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
@@ -77,5 +77,5 @@
         </form>
     @endif
 
-
 </div>
+

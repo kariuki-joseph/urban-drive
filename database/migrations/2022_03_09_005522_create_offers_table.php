@@ -15,8 +15,13 @@ class CreateOffersTable extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('car_id');
-            $table->decimal('new_price');
+            $table->string('model',30);
+            $table->string('name',50);
+            $table->string('type',10);
+            $table->char('color',15);
+            $table->decimal('price');
+            $table->string('description',200);
+            $table->timestamps();
         });
     }
 

@@ -46,7 +46,7 @@
                   <td> {{$car->id}}</td>
                   <td>{{$car->model}} </td>
                   <td>{{$car->name}}</td>
-                  <td><img src="/assets/image/vehicle-5.png" heigth="200px" width="100px" alt=""></td>
+                  <td><img src="/img/{{$car->images[0]->url}}" heigth="200px" width="100px" alt=""></td>
                   <td>{{$car->price}}</td>
                   <td>
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
@@ -99,14 +99,15 @@
             </table>  
           </section>
          <section class="col-4 border border-warning">
-           <form action="{{url('/addcar')}}" method="POST">
+           <form action="{{url('/addcar')}}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="mb-3">
-                <label class="text-gray form-label">Car id</label>
-                <input type="text" name="id" class="form-control" id="carId" placeholder="Enter Car id">
-              <div class="mb-3">
                 <label class="text-gray form-label">Car Model</label>
-                <input type="text" name="model" class="form-control" id="carModel" placeholder="Enter Car Model">
+                <select name="model" class="form-control form-control-lg"  placeholder="Model" required>
+                 @foreach ($models as $model)
+                  <option value="2">{{$model->model}}</option>
+                  @endforeach
+                   </select>   
               </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">Car Name</label>
@@ -115,16 +116,24 @@
               
               <div class="mb-3">
                 <label class="text-gray form-label">Image</label>
-                <input type="file" name="age" class="form-control" name="image" id="image" placeholder="select image car">
+                <input type="file" name="image" class="form-control" name="image" id="image" placeholder="select image car">
               </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">Type</label>
-                <input type="text" name="type" class="form-control" id="type" placeholder="Enter your type">
-              </div>
+                <select name="type" class="form-control form-control-lg" placeholder="TYPE" required>
+                     @foreach ($types as $type)
+                    <option value="2">{{$type->types}}</option>
+                    @endforeach
+                  </select>           
+                  </div>
               <div class="mb-3">
                 <label class="text-gray form-label">Color</label>
-                <input type="text" name="age" class="form-control" name="color" id="color" placeholder="select car color">
-              </div>
+                <select name="color" class="form-control form-control-lg"  placeholder="COLOR" required>
+                    @foreach ($colors as $color)
+                    <option value="2">{{$color->colors}}</option>
+                    @endforeach
+                  </select>             
+                 </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">price</label>
                 <input type="number" name="price" class="form-control" id="price" placeholder="Enter the price ">
@@ -143,6 +152,7 @@
       </div>
                 
     </div>
+    @foreach ($cars as $car)
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
                      <div class="modal-dialog" role="document">
                        <div class="modal-content">
@@ -157,12 +167,17 @@
                          </span>
                          </div>
                          <div class="modal-footer">
-                          <a class=" btn btn-danger"  href="">Yes</a>        
+                         <a href="{{ url('/vehicles', ['id' => $car->id]) }}">
+                          <button class="btn btn-danger">
+                                   Delete
+                            </button>
+                           </a>       
                           <a href="" class=" btn btn-primary bg-warning" >No</a>        
                          </div>
                        </div>
                      </div>
-                   </div>   
+                   </div> 
+                   @endforeach  
     <!-- End of Page Wrapper -->
 
    

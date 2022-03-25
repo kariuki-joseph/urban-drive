@@ -633,10 +633,12 @@ section{
     }
 
     .header{
+      background-color: #a28e0c;
         padding:2rem;
     }
 
     .header.active{
+         background-color: #eee;
         padding:2rem;
     }
 

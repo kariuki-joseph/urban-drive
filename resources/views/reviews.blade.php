@@ -116,30 +116,31 @@
                        <div class="modal-content">
                          <div class="modal-header" style="postion:relative">
                         <h3> PLEASE FILL THIS FORM TO SUBMIT YOUR REVIEW<h3> 
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
-                             <span aria-hidden="true">&times;</span>
+
+        <button type="button" class="close btn"  data-dismiss="modal" aria-label="Close">
+                                         <span aria-hidden="true">&times;</span>
                            </button>
                         </div>
                          <div class="modal-body">
                              <h4 id="reviewResp" style="display:none"></h4>
                         <!-- Review submission handled via javascript -->
-                         <form id="reviewForm" method="POST" action="/reviews" class="mb-3">
+                         <form id="reviewForm" method="POST" action="/reviews/add" class="mb-3" enctype="multipart/form-data">
                              @csrf
                                 <div class="form-group">
                                     <label  class="form-label">Your Name</label>
-                                    <input type="text" name="reviewName" class="form-control" id="carName" value="{{session()->has('user')?session('user')->username:'' }}" placeholder="Enter your name">
+                                    <input type="text" name="name" class="form-control" id="carName" value="{{session()->has('user')?session('user')->username:'' }}" placeholder="Enter your name">
                                 </div> 
                                 <div class="form-group">
                                     <label  class="form-label">Your Email</label>
-                                    <input type="text" name="reviewemail" class="form-control" id="carName" value="{{ session()->has('user')?session('user')->email:''}}" placeholder="Enter your Email">
+                                    <input type="text" name="email" class="form-control" id="carName" value="{{ session()->has('user')?session('user')->email:''}}" placeholder="Enter your Email">
                                 </div> 
                                 <div class="form-group">
                                  <label  class="form-label">Your Review</label>
                                  <textarea name="review" id="review" cols="20" rows="5" class="form-control " placeholder="Add your review here...." ></textarea>
                               </div>
                               <div class="form-group">
-                                <a href="#" class="btn btn-primary" class="close" data-dismiss="modal" >CANCEL <i class="fa fa-window-close"></i></a>   
-                                <button class=" btn btn-danger float-right"  type="submit">SUBMIT <i class="fa fa-paper-plane"></i></button>        
+                                <a href="#" class="btn btn-warning" class="close" data-dismiss="modal" >CANCEL <i class="fa fa-window-close"></i></a>   
+                                <button class=" btn btn-warning float-right" name="submit" type="submit">SUBMIT <i class="fa fa-paper-plane"></i></button>        
                             </div>
                             </form>
                        </div>

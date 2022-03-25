@@ -21,10 +21,9 @@ Route::post('/register', 'UserController@register');
 Route::get('/logout', 'UserController@logout');
 
 Route::get('/vehicles', "CarController@index");
-Route::get('/vehicles/{id}', 'CarController@show');
 Route::post('/addcar', 'CarController@store');
 Route::put('/{id}','CarController@update');
-Route::delete('/{id}', 'CarController@destroy');
+Route::get('/vehicles/{id}','CarController@destroy');
 
 Route::get('/services', "ServicesController@index");
 Route::get('/services/{id}', 'ServicesController@show');
@@ -32,11 +31,17 @@ Route::post('/services','ServicesController@store');
 Route::put('/services/{id}','ServicesController@update');
 Route::delete('/services/{id}','ServicesController@destroy');
 
-Route::post('/reviews','ReviewController@store');
+Route::post('/reviews/add','ReviewController@store');
 Route::get('/reviews', "ReviewController@index");
 Route::get('/reviews/{id}', 'ReviewController@show');
 Route::put('/reviews/{id}','ReviewController@update');
 Route::delete('/reviews/{id}','ReviewController@destroy');
+
+Route::post('/featured/add','OfferController@store');
+Route::get('/featured', "OfferController@index");
+Route::get('/featured/{id}', 'OfferController@show');
+Route::put('/featured/{id}','OfferController@update');
+Route::delete('/featured/{id}','OfferController@destroy');
 
 
 Route::get('/contact', "ContactController@index");
@@ -48,7 +53,13 @@ Route::delete('/contact/{id}','ContactController@destroy');
 Route::get('/admin', "AdminController@index");
 Route::get('/admin/login', 'AdminController@login');
 Route::get('/admin/featured', 'AdminController@featured');
-Route::get('/admin/trial', 'AdminController@admintrial');
 Route::get('/admin/orders', 'AdminController@orders');
 Route::get('/admin/reviews', 'AdminController@reviews');
 Route::post('/admin/login', 'AdminController@handleLogin');
+Route::get('/admin/cars/information','AdminController@carinfopage');
+Route::get('/admin/addcar/information','AdminController@addcarinfo');
+//car info
+Route::post('/admin/carinfo/addcolor','carInfo@addcolor');
+Route::post('/admin/carinfo/addtype','carInfo@addtype');
+Route::post('/admin/carinfo/addmodel','carInfo@addmodel');
+
