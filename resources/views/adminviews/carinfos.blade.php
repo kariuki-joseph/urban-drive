@@ -111,7 +111,7 @@
 <div class="modal-content">
 <div class="modal-header bg-warning">
 <h5 class="modal-title" id="exampleModalLabel">Add a type</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<button type="button" class="btn-close btn btn-danger" data-bs-dismiss="modal" aria-label="Close">close</button>
 </div>
 <div class="modal-body">
 <form action="{{url('/admin/carinfo/addtype')}}" method="POST" enctype="multipart/form-data">

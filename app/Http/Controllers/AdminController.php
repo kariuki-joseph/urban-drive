@@ -9,24 +9,25 @@ use App\Offer;
 use App\Colors;
 use App\Types;
 use App\Models;
+use App\Order;
 class AdminController extends Controller
 {
 
     public function login(){
-        $cars=Car::all();
+        $cars=Car::with("images")->get();
         $offers=Offer::all();
         $colors=Colors::all();
         $types=Types::all();
         $models=Models::all();
-        
-        return view('adminviews.admin-login',compact('cars','offers','colors','types','models'));
+        return view('adminviews.admin-login')->with(['cars'=>$cars,'offers'=>$offers,'colors'=>$colors,'types'=>$types,'models'=>$models]);
     }
     public function index(){
-        $cars=Car::all();
+        $cars=Car::with("images")->get();
         $colors=Colors::all();
         $types=Types::all();
         $models=Models::all();
 return view('adminviews.dashboard',compact('cars','colors','types','models'));
+// return view('adminviews.admin-login')->with(['cars'=>$cars,'colors'=>$colors,'types'=>$types,'models'=>$models]);
     }
     public function featured(){
         $offers=Offer::all();
@@ -34,11 +35,16 @@ return view('adminviews.dashboard',compact('cars','colors','types','models'));
         
     }
     public function orders(){
-        return view('adminviews.orders');
+        $orders=Order::all();
+
+        return view('adminviews.orders',compact('orders'));
     }
     public function reviews(){
         return view('adminviews.reviews');
     }
+    public function message(){
+        return view('adminviews.message');
+    }   
     public function handleLogin(Request $request){
         $email = $request->email;
         $password = $request->password;
@@ -49,8 +55,12 @@ return view('adminviews.dashboard',compact('cars','colors','types','models'));
         if($admin){
             //set admin session and redirect
             session(['admin'=>$admin]);
-            $cars=Car::all();
-            return view('adminviews.dashboard',compact('cars'));
+            $cars=Car::with("images")->get();
+            $colors=Colors::all();
+            $types=Types::all();
+            $models=Models::all();
+
+            return view('adminviews.dashboard',compact('cars','colors','types','models'));
         }else{
             redirect()->back()->with('error', 'Unable to verify your credentials. Please try again.');
         }
@@ -65,8 +75,4 @@ return view('adminviews.dashboard',compact('cars','colors','types','models'));
 
 
 
-    
-    public function message(){
-        return view('adminviews.message');
-    }
 }

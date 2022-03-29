@@ -124,7 +124,7 @@
                          <div class="modal-body">
                              <h4 id="reviewResp" style="display:none"></h4>
                         <!-- Review submission handled via javascript -->
-                         <form id="reviewForm" method="POST" action="/reviews/add" class="mb-3" enctype="multipart/form-data">
+                         <form id="reviewForm" method="POST" action="{{url('/reviews/add')}}" class="mb-3" enctype="multipart/form-data">
                              @csrf
                                 <div class="form-group">
                                     <label  class="form-label">Your Name</label>
@@ -140,7 +140,7 @@
                               </div>
                               <div class="form-group">
                                 <a href="#" class="btn btn-warning" class="close" data-dismiss="modal" >CANCEL <i class="fa fa-window-close"></i></a>   
-                                <button class=" btn btn-warning float-right" name="submit" type="submit">SUBMIT <i class="fa fa-paper-plane"></i></button>        
+                                <button class=" btn btn-warning float-right" name="submit" type="submit">SUBMIT</button>        
                             </div>
                             </form>
                        </div>

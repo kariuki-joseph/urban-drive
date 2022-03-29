@@ -16,6 +16,7 @@ class CarController extends Controller
         $colors=Colors::all();
         $types=Types::all();
         $models=Models::all();
+    
         return view('vehicles',compact('cars','colors','types','models'));
     }   
     
@@ -41,6 +42,7 @@ class CarController extends Controller
 
         
         $car->save();
+        
 
         $car->images()->create([
             'url'=>$imagename

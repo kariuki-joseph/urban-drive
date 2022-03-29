@@ -30,115 +30,28 @@
       
               <thead>
                 <tr  class="bg-warning">
-                <th scope="col"  class=" border border-warning">id</th>
-                  <th scope="col" class=" border border-warning">User Name</th>
-                  <th scope="col"  class=" border border-warning">Email</th>
-                  <th scope="col"  class=" border border-warning">Car Id</th>
+                <th scope="col"  class=" border border-warning">Order Id</th>
+                  <th scope="col" class=" border border-warning">Car Id</th>
+                  <th scope="col"  class=" border border-warning">contact</th>
+                  <th scope="col"  class=" border border-warning">Time Booked</th>
                   <th scope="col"  class=" border border-warning">Status</th>
                 </tr>
               </thead>
-              <tbody>      
+              <tbody> 
+                @foreach ($orders as $order)     
                 <tr >
-                  <td  class=" border border-warning">3434</td>
-                  <td  class=" border border-warning">prof </td>
-                  <td  class=" border border-warning">prof@gmail.com</td>
-                  <td  class=" border border-warning">63253</td>
-                <td>
+                  <td  class=" border border-warning">{{$order->id}}</td>
+                  <td  class=" border border-warning">{{$order->carId}} </td>
+                  <td  class=" border border-warning">{{$order->contact}}</td>
+                  <td  class=" border border-warning">{{$order->order_date}}</td>
+                 <td>
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal1">
                    Attended
                     </button>
                     
                   </td>
-                </tr>
-                <tr>
-                  <td class=" border border-warning">3343</td>
-                  <td class=" border border-warning">mkadinali </td>
-                  <td class=" border border-warning">mkadinali@gmail.com</td>
-                  <td class=" border border-warning">222</td>
-                <td class=" border border-warning">
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
-                     Pending 
-                    </button>
-                    
-                  </td>
-                </tr>
-                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
-                            <h1>EDIT CAR INFORMATION</h1>
-                        </div>
-                         <div class="modal-body">
-                         <form action="" method="#">
-                             <div class="mb-3">
-                                <label class="form-label">Car id</label>
-                                <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
-                              <div class="mb-3">
-                                <label class="form-label">Car Model</label>
-                                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
-                              </div>
-                              <div class="mb-3">
-                                <label  class="form-label">Car Name</label>
-                                <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
-                              </div>              
-                              <div class="mb-3">
-                                 <label class="form-label">Image</label>
-                                <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
-                              </div>
-                              <div class="mb-3">
-                                <label  class="form-label">Speciality</label>
-                                <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
-                              </div>
-                            </form>
-                         </div>
-                         <div class="modal-footer">
-                         <button type="submit" class="btn btn-warning" name="save">Add Car</button>
-                         <button type="submit" class="btn btn-secondary">Reset</button>      
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
-                             <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                         <div class="modal-body">
-                            <span class="text-dark">
-                           Are sure you want to  delete this car?
-                         </span>
-                         </div>
-                         <div class="modal-footer">
-                          <a class=" btn btn-danger"  href="">Yes</a>        
-                          <a href="" class=" btn btn-primary" >No</a>        
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
-                             <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                         <div class="modal-body">
-                            <span class="text-dark">
-                           Are sure you want to  delete this car?
-                         </span>
-                         </div>
-                         <div class="modal-footer">
-                          <a class=" btn btn-danger"  href="">Yes</a>        
-                          <a href="" class=" btn btn-primary" >No</a>        
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-  
+                </tr> 
+                @endforeach
               </tbody>
             </table>  
           </section>

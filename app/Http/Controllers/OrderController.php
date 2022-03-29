@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Order;
 
 class OrderController extends Controller
 {
@@ -14,6 +15,11 @@ class OrderController extends Controller
     //POST
     public function store(Request $request){
 
+        $order= new Order();
+        $order->carId=$request->id;
+        $order->contact=$request->contact;
+        $order->save();
+        return redirect()->back();
     }
 
     // GET one

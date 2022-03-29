@@ -46,7 +46,13 @@
                   <td> {{$car->id}}</td>
                   <td>{{$car->model}} </td>
                   <td>{{$car->name}}</td>
-                  <td><img src="/img/{{$car->images[0]->url}}" heigth="200px" width="100px" alt=""></td>
+                  @if($car->images()->exists())
+                    @foreach($car->images as $image)
+                      <td><img src="/img/{{ $image->url }}" heigth="200px" width="100px" alt=""></td>
+                    @endforeach
+                  @else
+                  <td><img src="/img/{{ '/img/default.png' }}" heigth="200px" width="100px" alt=""></td>
+                  @endif
                   <td>{{$car->price}}</td>
                   <td>
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
@@ -105,7 +111,7 @@
                 <label class="text-gray form-label">Car Model</label>
                 <select name="model" class="form-control form-control-lg"  placeholder="Model" required>
                  @foreach ($models as $model)
-                  <option value="2">{{$model->model}}</option>
+                  <option>{{$model->model}}</option>
                   @endforeach
                    </select>   
               </div>
@@ -122,7 +128,7 @@
                 <label  class="text-gray form-label">Type</label>
                 <select name="type" class="form-control form-control-lg" placeholder="TYPE" required>
                      @foreach ($types as $type)
-                    <option value="2">{{$type->types}}</option>
+                    <option>{{$type->types}}</option>
                     @endforeach
                   </select>           
                   </div>
@@ -130,7 +136,7 @@
                 <label class="text-gray form-label">Color</label>
                 <select name="color" class="form-control form-control-lg"  placeholder="COLOR" required>
                     @foreach ($colors as $color)
-                    <option value="2">{{$color->colors}}</option>
+                    <option>{{$color->colors}}</option>
                     @endforeach
                   </select>             
                  </div>

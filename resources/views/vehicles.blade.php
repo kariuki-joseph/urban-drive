@@ -35,7 +35,6 @@
      @foreach ($cars as $car)
     
             <div class="swiper-slide box">
-                <img src="/img/{{$car->images[0]->url}}" alt="">
                 <div class="content">
                     <h3> {{$car->model}}</h3>
                     <div class="price"> <span>price :ksh </span>{{$car->price}}</div>
@@ -62,45 +61,44 @@
                        <div class="modal-content">
                          <div class="modal-header" style="postion:relative">
                             <h1>BOOK A CAR HERE</h1>
+                            <button type="button" class="btn-close btn btn-warning" data-bs-dismiss="modal" aria-label="Close">close</button>
                         </div>
                          <div class="modal-body">
-                         <form action="" method="#">
+                         <form action="{{url('/bookcar')}}" method="POST">
+                           @csrf
                          <div class="mb-3">
                                 <label class="form-label">Car ID</label>
-                                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Id">
-                              </div>
-                         <div class="mb-3">
-                                <label class="form-label">Car Model</label>
-                                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
-                              </div>
+                                <input type="number" name="id" class="form-control" id="id" placeholder="Enter Car Id">
+                              </div>   
                               <div class="mb-3">
-                                <label  class="form-label">Car Name</label>
-                                <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
-                              </div>              
+                                <label class="form-label">Phone number</label>
+                                <input type="number" name="contact" class="form-control" id="contact" placeholder="Enter contact">
+                              </div>  
+                              <button type="submit" class="btn btn-primary " name="save">BOOK <i class="fa fa-paper-plane"></i></button>
+                         <button type="submit" class="btn btn-secondary">CANCEL</button>               
                             </form>
                          </div>
-                         <div class="modal-footer">
-                         <button type="submit" class="btn btn-primary " name="save">BOOK <i class="fa fa-paper-plane"></i></button>
-                         <button type="submit" class="btn btn-secondary">CANCEL</button>      
-                         </div>
+                      
                        </div>
                      </div>
-
-
-
-</section>
+                    </section>
 <section>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header bg-warning" style="postion:relative">
-                            <h1>BOOK A CAR NOW
-                            </h1>
-                        </div>
+         <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                   <div class="modal-header bg-warning" style="postion:relative">
+                          <h1>MORE CAR INFORMATION
+                          </h1>
+                          <button type="button" class="btn-close  btn" data-bs-dismiss="modal" aria-label="Close">close</button>
+                    </div>
                          <div class="modal-body">
                     <div class="card">                 
                     <div class="swiper-slide box">
-                 <img src="/img/{{$car->images[0]->url}}" alt="">
+                    @if($car->images()->exists())
+                      @foreach($car->images as $image)
+                        <img src="/img/{{$image->url}}" alt="">
+                      @endforeach
+                   @endif
                  <div class="content"><h2>
                  <div class="price"> <span  class="text-warning">CAR MODEL : </span>{{$car->model}}</div>
                    <div class="price"> <span class="text-warning" >CAR ID :  </span>{{$car->id}} </div>
