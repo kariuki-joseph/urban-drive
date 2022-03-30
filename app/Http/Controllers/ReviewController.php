@@ -15,20 +15,19 @@ class ReviewController extends Controller
     
     //POST
     public function store(Request $request){
-   $review =new Review;
+   $review =new Review();
    $review->username=$request->username;
    $review->email=$request->email;
    $review->review=$request->review;
    $review->save();
-   return redirect()->back();
 
    
-       /* return response()->json(array(
-            'data'=>array(
-                'status'=>true,
-                'message'=>'Your review was successfully submitted. Thank you for your feedback.'
-            )
-            ));*/
+     return response()->json(array(
+        'data'=>array(
+            'status'=>true,
+            'message'=>'Your review was successfully submitted. Thank you for your feedback.'
+        )
+        ));
     }
 
     // GET one
