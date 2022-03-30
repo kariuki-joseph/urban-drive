@@ -21,16 +21,14 @@ class ContactController extends Controller
         $contact->email=$request->email;
         $contact->subject=$request->subject;
         $contact->message=$request->message;
-               $contact->save();
+        $contact->save();
 
-     return redirect()->back();
-
-        // return response()->json(array(
-        //     'data'=>array(
-        //         'status'=>true,
-        //         'message'=>'Your message was successfullu submitted. We will be getting back to you soon.'
-        //     )
-        // ));
+        return response()->json(array(
+            'data'=>array(
+                'status'=>true,
+                'message'=>'Your message was successfully submitted. We will be getting back to you soon.'
+            )
+        ));
     }
 
 

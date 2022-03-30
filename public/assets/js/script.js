@@ -120,6 +120,7 @@ $("#formAdminLogin").submit((e)=>{
     }).catch(err=>console.log(err))
 })
 
+//Admin login in redirected page
 $("#formAdminLogin1").submit((e)=>{
   e.preventDefault();
   let form = new FormData(e.target);
