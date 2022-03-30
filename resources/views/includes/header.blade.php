@@ -53,7 +53,7 @@
         <input type="password" name="password" placeholder="password" class="box">
         <input type="submit" value="login" class="btn">
        
-        <p> For admin login <a href="/admin/login">click here</a> </p>
+        <p> For admin login <a  id="btn-admin-login" href="#">click here</a> </p>
 
         <p> don't have an account <a href="#" id="btn-register">Register here</a> </p>
     </form>
@@ -69,6 +69,15 @@
         <input type="submit" value="register" class="btn">
         
         <p> Already have an account? <a id="btn-login" href="#">login here</a> </p>
+    </form>
+
+    <form  id="formAdminLogin" method="POST" action="" class="d-none">
+        @csrf
+        <h3>URBAN DRIVE ADMIN LOGIN</h3>
+        <h5 id="adminLoginResp"></h5>
+        <input type="email" name="email" id="email" placeholder="Enter email" class="box">
+        <input type="password" name="password" placeholder="password" class="box">
+        <input type="submit" value="login" class="btn">
     </form>
     @else
         <form action="/logout" method="get">

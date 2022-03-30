@@ -22,6 +22,9 @@ class AdminController extends Controller
         return view('adminviews.admin-login')->with(['cars'=>$cars,'offers'=>$offers,'colors'=>$colors,'types'=>$types,'models'=>$models]);
     }
     public function index(){
+    if(!session()->has('admin')){
+        return view('adminviews.admin-login');
+    }
         $cars=Car::with("images")->get();
         $colors=Colors::all();
         $types=Types::all();
@@ -54,17 +57,30 @@ return view('adminviews.dashboard',compact('cars','colors','types','models'));
         ->where('password','=',$password,'and')
         ->where('user_type','=','admin')->get();
         
-        if($admin){
+        if($admin->count() > 0){
             //set admin session and redirect
-            session(['admin'=>$admin]);
-            $cars=Car::with("images")->get();
-            $colors=Colors::all();
-            $types=Types::all();
-            $models=Models::all();
+            session(['admin'=>$admin[0]]);
+            // $cars=Car::with("images")->get();
+            // $colors=Colors::all();
+            // $types=Types::all();
+            // $models=Models::all();
 
-            return view('adminviews.dashboard',compact('cars','colors','types','models'));
+            // return view('adminviews.dashboard',compact('cars','colors','types','models'));
+            return response()->json(array(
+                'data'=>array(
+                    'status'=>1,
+                    'message'=>'Login Successful.',
+                    'redirect_url'=>'/admin',
+                    'data'=>$admin
+                )
+                ));
         }else{
-            redirect()->back()->with('error', 'Unable to verify your credentials. Please try again.');
+            return response()->json(array(
+                'data'=>array(
+                    'status'=>0,
+                    'message'=>'Unable to verify your credentials. Please try again.',
+                )
+                ));
         }
     }
     public function carinfopage(){
@@ -75,6 +91,10 @@ return view('adminviews.dashboard',compact('cars','colors','types','models'));
         
  }
 
-
+ //admin logout
+ public function logout(){
+     session()->forget('admin');
+     return redirect('/admin');
+ }
 
 }

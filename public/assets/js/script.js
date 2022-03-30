@@ -23,11 +23,18 @@ $('#close-login-form').click(() =>{
 
 $('#btn-register').click(()=>{
   $('#formLogin').addClass('d-none');
+  $("#formAdminLogin").addClass('d-none');
   $('#formRegister').removeClass('d-none');
 })
 $('#btn-login').click(()=>{
   $('#formLogin').removeClass('d-none');
+  $("#formAdminLogin").addClass('d-none');
   $('#formRegister').addClass('d-none');
+})
+$('#btn-admin-login').click(()=>{
+  $('#formLogin').addClass('d-none');
+  $('#formRegister').addClass('d-none');
+  $("#formAdminLogin").removeClass('d-none');
 })
 $('.home').on('mousemove', (e) =>{
   $('.home-parallax').each(function(){
@@ -88,7 +95,54 @@ $("#formRegister").submit((e)=>{
     }).catch(err=>console.log(err))
 })
 
+//admin login
+$("#formAdminLogin").submit((e)=>{
+  e.preventDefault();
+  let form = new FormData(e.target);
+    fetch('/admin/login', {
+      method:'POST',
+      body: form
+    }).then(res=>res.json()).then(({data})=>{
+      if(data.status == false){
+        //error in admin login
+        $("#adminLoginResp").text(data.message).css('color','red').show();
+      }else{
+        //successful login
+        $("#adminLoginResp").text(data.message).css('color','green').show()
+        setTimeout(()=>{
+          $(".login-form-container").removeClass('active')
+          $("#adminLoginResp").text('')
+          $(e.target).get(0).reset()
+          window.location.href=data.redirect_url
+        }, 1500);
+        
+      }
+    }).catch(err=>console.log(err))
+})
 
+$("#formAdminLogin1").submit((e)=>{
+  e.preventDefault();
+  let form = new FormData(e.target);
+      fetch('/admin/login', {
+      method:'POST',
+      body: form
+      }).then(res=>res.json()).then(({data})=>{
+      if(data.status == false){
+          //error in admin login
+          $("#adminLoginResp1").text(data.message).css('color','red').show();
+      }else{
+          //successful login
+          $("#adminLoginResp1").text(data.message).css('color','green').show()
+          setTimeout(()=>{
+          $(".login-form-container").removeClass('active')
+          $("#adminLoginResp1").text('')
+          $(e.target).get(0).reset()
+          window.location.href=data.redirect_url
+          }, 1500);
+          
+      }
+      }).catch(err=>console.log(err))
+  })
 //Review form submission
 $("#reviewForm").submit((e)=>{
   e.preventDefault();

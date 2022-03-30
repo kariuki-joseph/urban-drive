@@ -31,7 +31,7 @@ Route::post('/services','ServicesController@store');
 Route::put('/services/{id}','ServicesController@update');
 Route::delete('/services/{id}','ServicesController@destroy');
 
-Route::post('/reviews/add','ReviewController@store');
+Route::post('/reviews','ReviewController@store');
 Route::get('/reviews', "ReviewController@index");
 Route::get('/reviews/{id}', 'ReviewController@show');
 Route::put('/reviews/{id}','ReviewController@update');
@@ -46,25 +46,26 @@ Route::get('/offers/{id}','OfferController@destroy');
 
 Route::get('/contact', "ContactController@index");
 Route::get('/contact/{id}', 'ContactController@show');
-Route::post('/contact/messssage','ContactController@store');
+Route::post('/contact','ContactController@store');
 Route::put('/contact/{id}','ContactController@update');
 Route::delete('/contact/{id}','ContactController@destroy');
 //admin route
 Route::get('/admin', "AdminController@index");
-// Route::get('/admin/login', 'AdminController@login');
+Route::post('/admin/login', 'AdminController@handleLogin');
 Route::get('/admin/featured', 'AdminController@featured');
 Route::get('/admin/message', 'AdminController@message');
 Route::get('/admin/orders', 'AdminController@orders');
 Route::get('/admin/reviews', 'AdminController@reviews');
 Route::get('/reviews/add', 'ReviewsController@store');
-
-Route::get('/admin/login', 'AdminController@handleLogin');
+Route::get('/admin/logout','AdminController@logout');
+// Route::get('/admin/login', 'AdminController@handleLogin');
 Route::get('/admin/cars/information','AdminController@carinfopage');
 Route::get('/admin/addcar/information','AdminController@addcarinfo');
 //car info
 Route::post('/admin/carinfo/addcolor','carInfo@addcolor');
 Route::post('/admin/carinfo/addtype','carInfo@addtype');
 Route::post('/admin/carinfo/addmodel','carInfo@addmodel');
+
 Route::post('/bookcar','OrderController@store');
 
 
