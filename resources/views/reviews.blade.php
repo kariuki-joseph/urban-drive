@@ -6,7 +6,7 @@
     <div class="swiper review-slider">
 
         <div class="swiper-wrapper">
-            @if(count($reviews))
+            
                 @foreach($reviews as $review)
                 <div class="swiper-slide box">
                     <img src="assets/image/pic-1.png" alt="">
@@ -14,30 +14,16 @@
                     <p>A was able to purchase my first dream car from this site and I 
                             received te best customer care services that i really appreciate.this the best site to get a car</p>
                         <h3>JAMES MASARA</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
                     </div>
                 </div>
                 @endforeach
-            @endif
             <div class="swiper-slide box">
                 <img src="assets/image/pic-2.png" alt="">
                 <div class="content">
                 <p>This is the best website to acquir a brand new car especially for beginners who might be ignorant when it come to this.
 </p>
                     <h3>DAVID MUGO</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                  
                 </div>
             </div>
 
@@ -47,44 +33,7 @@
                     <p>A was able to purchase my first dream car from this site and I 
                         received te best customer care services that i really appreciate.this the best site to get a car</p>
                     <h3>John Kamau</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="assets/image/pic-4.png" alt="">
-                <div class="content">
-                    <p>This is the best website to acquir a brand new car especially for beginners who might be ignorant when it come to this.
-</p>
-                    <h3>DAVID MUGO</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="assets/image/pic-5.png" alt="">
-                <div class="content">
-                    <p>I do not have a single of regret  after purshaching my gilfrend a car from urban cars .Urban car continue with the quality service and cars that you offeR</p>
-                    <h3>JOSEPH NJENGA</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                 
                 </div>
             </div>
 
@@ -94,13 +43,7 @@
                 <p>This is the best website to acquir a brand new car especially for beginners who might be ignorant when it come to this.
 </p>
                     <h3>LYDIA LEMARIMBE</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                 
                 </div>
             </div>
 

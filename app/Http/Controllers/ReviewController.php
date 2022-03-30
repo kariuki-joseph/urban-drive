@@ -8,7 +8,9 @@ class ReviewController extends Controller
 {
     //GET all
     public function index(){
-         return view('reviews');
+         $reviews=Review::all();
+         
+         return view('reviews',compact('reviews'));
     }
     
     //POST

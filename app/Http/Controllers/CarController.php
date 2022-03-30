@@ -34,11 +34,7 @@ class CarController extends Controller
         $car->type=$request->type;
         $car->color=$request->color;
         $car->price=$request->price;
-        $car->description ="
-        uses petrol
-        automatic
-        zero mileage
-        brand new model";
+        $car->description =description;
 
         
         $car->save();
@@ -69,4 +65,18 @@ class CarController extends Controller
         return redirect()->back();
         
     }
+    public function search(Request $request) {
+
+        // Sets the parameters from the get request to the variables.
+        $type=$request->type;
+        $model=$request->model;
+        $color=$request->color;        
+        // Perform the query using Query Builder
+        $results =Car::all()->where('color', '=', $color, 'and')
+        ->where('model', '=', $model, 'and')
+        ->where ('type', '=', $type);
+        
+        return view('search',compact('results'));
+        }
+        
 }

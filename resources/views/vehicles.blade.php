@@ -6,27 +6,29 @@
    
     <h1 class="heading mt-3"> AVAILABLE <span>VEHICLES</span> </h1>
     <div class="row my-3">
-    <div class="container">
+  <div class="container">
+<form action="{{url('/search/vehicle')}}" method="GET">
 <div class="form-inline" >
-  <select name="model" class="form-control form-control-lg"  placeholder="Model" required>
+  <select name="model" class="form-control form-control-lg"  placeholder="Model" >
     @foreach ($models as $model)
-    <option value="2">{{$model->model}}</option>
+    <option>{{$model->model}}</option>
     @endforeach
     </select>
 
-   <select name="type" class="form-control form-control-lg" placeholder="TYPE" required>
+   <select name="type" class="form-control form-control-lg" placeholder="TYPE" >
      @foreach ($types as $type)
-    <option value="2">{{$type->types}}</option>
+    <option>{{$type->types}}</option>
     @endforeach
   </select>
-   <select name="color" class="form-control form-control-lg"  placeholder="COLOR" required>
+   <select name="color" class="form-control form-control-lg"  placeholder="COLOR">
    @foreach ($colors as $color)
-    <option value="2">{{$color->colors}}</option>
+    <option >{{$color->colors}}</option>
     @endforeach
   </select>
-  <button type="submit" class="input-group-text btn btn-warning"><i class="bi bi-search me-2"></i> Search for Vehicle</button>
-</div> 
-        </form>
+  <button type="submit" class="btn btn-WARNING" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-search me-2">
+  Search for vehicle
+</button></div> 
+
     </div>
     </div>
     <div class="swiper vehicles-slider">
@@ -74,7 +76,7 @@
                                 <label class="form-label">Phone number</label>
                                 <input type="number" name="contact" class="form-control" id="contact" placeholder="Enter contact">
                               </div>  
-                              <button type="submit" class="btn btn-primary " name="save">BOOK <i class="fa fa-paper-plane"></i></button>
+                              <button type="submit" class="btn btn-warning " name="save">BOOK <i class="fa fa-paper-plane"></i></button>
                          <button type="submit" class="btn btn-secondary">CANCEL</button>               
                             </form>
                          </div>

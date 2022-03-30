@@ -41,7 +41,7 @@ Route::post('/featured/add','OfferController@store');
 Route::get('/featured', "OfferController@index");
 Route::get('/featured/{id}', 'OfferController@show');
 Route::put('/featured/{id}','OfferController@update');
-Route::delete('/featured/{id}','OfferController@destroy');
+Route::get('/offers/{id}','OfferController@destroy');
 
 
 Route::get('/contact', "ContactController@index");
@@ -51,14 +51,14 @@ Route::put('/contact/{id}','ContactController@update');
 Route::delete('/contact/{id}','ContactController@destroy');
 //admin route
 Route::get('/admin', "AdminController@index");
-Route::get('/admin/login', 'AdminController@login');
+// Route::get('/admin/login', 'AdminController@login');
 Route::get('/admin/featured', 'AdminController@featured');
 Route::get('/admin/message', 'AdminController@message');
 Route::get('/admin/orders', 'AdminController@orders');
 Route::get('/admin/reviews', 'AdminController@reviews');
 Route::get('/reviews/add', 'ReviewsController@store');
 
-Route::post('/admin/login', 'AdminController@handleLogin');
+Route::get('/admin/login', 'AdminController@handleLogin');
 Route::get('/admin/cars/information','AdminController@carinfopage');
 Route::get('/admin/addcar/information','AdminController@addcarinfo');
 //car info
@@ -68,6 +68,8 @@ Route::post('/admin/carinfo/addmodel','carInfo@addmodel');
 Route::post('/bookcar','OrderController@store');
 
 
-Route::post('/sendmessage','COntactController@store');
+Route::post('/sendmessage','ContactController@store');
+Route::get('/search/vehicle','CarController@search');
+
 
 

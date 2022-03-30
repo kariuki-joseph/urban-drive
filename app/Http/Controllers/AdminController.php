@@ -47,7 +47,9 @@ return view('adminviews.dashboard',compact('cars','colors','types','models'));
     }   
     public function handleLogin(Request $request){
         $email = $request->email;
+        // dd($email);
         $password = $request->password;
+       
         $admin = User::where('email','=',$email,'and')
         ->where('password','=',$password,'and')
         ->where('user_type','=','admin')->get();

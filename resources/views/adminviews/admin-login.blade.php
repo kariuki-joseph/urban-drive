@@ -1,6 +1,6 @@
 @include('includes.header')
 <div class="login-form-container active">
-    <form  id="formAdminLogin" method="POST" action="/admin/login">
+    <form  id="formAdminLogin" method="POST" action="{{url('/admin/login')}}">
         @csrf
         <h3>URBAN DRIVE ADMIN LOGIN</h3>
         <input type="email" name="email" id="email" placeholder="Enter email" class="box">

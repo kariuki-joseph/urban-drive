@@ -20,13 +20,13 @@ class OfferController extends Controller
         $imagename =time().'.'.$image->getClientOriginalExtension();
         $image->move('img_offer',$imagename);
 
-
+      
        $offer->model=$request->model;
        $offer->name=$request->name;
        $offer->type=$request->type;
        $offer->color=$request->color;
        $offer->price=$request->price;
-       $offer->description ="jfsjfjj";
+       $offer->description =description;
 
         
        $offer->save();
@@ -50,6 +50,10 @@ class OfferController extends Controller
 
     //DELETE
     public function destroy($id){
+        $offers=Offer::find($id);
+        die($offer);
+        $offers->delete();
+        return redirect()->back();
         
     }
 }

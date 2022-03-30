@@ -43,58 +43,46 @@ die(offers)
               <tbody>      
         @foreach ($offers as $offer)
         <tr>
+        <td>{{$offer->id}}</td>
         <td>{{$offer->model}}</td>
         <td>{{$offer->name}} </td>
-        <td>{{$offer->price}}</td>
         <td><img src="/assets/image/vehicle-5.png" heigth="200px" width="100px" alt=""></td>
-        <td>xc</td>
+        <td>{{$offer->price}}</td>
         <td>
-          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
-            Edit
-       </button>          
+               
           <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
             Delete
           </button>
         </td>
       </tr>
-      @endforeach
-                  
-                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
+      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal2" aria-hidden="true">
                      <div class="modal-dialog" role="document">
                        <div class="modal-content">
-                         <div class="modal-header bg-warning" style="postion:relative">
-                            <h1 >EDIT CAR INFORMATION</h1>
+                         <div class="modal-header" style="postion:relative">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
+                             <span aria-hidden="true">&times;</span>
+                           </button>
                         </div>
                          <div class="modal-body">
-                         <form action="" method="#" class="border border-warning">
-                             <div class="mb-3">
-                                <label class="form-label">Car id</label>
-                                <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
-                              <div class="mb-3">
-                                <label class="form-label">Car Model</label>
-                                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
-                              </div>
-                              <div class="mb-3">
-                                <label  class="form-label">Car Name</label>
-                                <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
-                              </div>              
-                              <div class="mb-3">
-                                 <label class="form-label">Image</label>
-                                <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
-                              </div>
-                              <div class="mb-3">
-                                <label  class="form-label">Speciality</label>
-                                <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
-                              </div>
-                            </form>
+                            <span class="text-dark">
+                           Are sure you want to  delete this car?
+                         </span>
                          </div>
                          <div class="modal-footer">
-                         <button type="submit" class="btn btn-warning" name="save">Edit Car</button>
-                         <button type="submit" class="btn btn-secondary">Reset</button>      
+                         <a href="{{ url('/offers', ['id' => $offer->id]) }}">
+                          <button class="btn btn-danger">
+                                   Delete
+                            </button>
+                           </a> 
+                           <a href="" class=" btn btn-primary" >No</a>        
                          </div>
                        </div>
                      </div>
                    </div>
+                     </div>
+      @endforeach
+                  
+              
                    
               </tbody>
             </table>  
@@ -144,27 +132,7 @@ die(offers)
       </div>
                 
     </div>
-    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header" style="postion:relative">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
-                             <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                         <div class="modal-body">
-                            <span class="text-dark">
-                           Are sure you want to  delete this car?
-                         </span>
-                         </div>
-                         <div class="modal-footer">
-                          <a class=" btn btn-danger"  href="">Yes</a>        
-                          <a href="" class=" btn btn-primary" >No</a>        
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                     </div>
+ 
     <!-- End of Page Wrapper -->
 
    
