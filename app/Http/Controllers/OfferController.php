@@ -9,7 +9,7 @@ class OfferController extends Controller
 {
     //GET all
     public function index(){
-        $offers=Offer::with('images')->get();
+        $offers=Offer::with('images','car')->get();
         return view('featured',compact('offers'));
     }
     

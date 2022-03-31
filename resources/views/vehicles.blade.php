@@ -89,11 +89,9 @@
                           <h1>MORE CAR INFORMATION</h1>
                           <button type="button" class="btn-close  btn" data-bs-dismiss="modal" aria-label="Close">close</button>
                     </div>
-                         <div class="modal-body">
-                    <div class="card">                 
-                      <!-- Content added via javascript -->
-                    </div>
-              </div>
+                    <div class="modal-body">
+                        <!-- Content content added via javascript -->
+                  </div>
             <div class="modal-footer">
             <a href="#" class="btn btn-secondary close" data-bs-dismiss="modal">CANCEL</a>       
             </div>

@@ -184,11 +184,13 @@ $("#formContact").submit(function(e){
       }
     }).catch(err=>console.log(err))
 })
+
 //view more car info
 function viewCarInfo(info){
   //fill modal with this cat information
  const car = JSON.parse(info);
   let content = `
+  <div class="card">
   <div class="swiper-slide box">
                       
   <img src="/img/${car.images[0].url}" alt="">
@@ -213,9 +215,50 @@ function viewCarInfo(info){
         
   </h2>                      
 </div>
+</div>
   `
-  $("#myModal").find('.card').html(content);
+  $("#myModal").find('.modal-body').html(content);
   $("#myModal").find('.modal-header>h1').text(`About ${car.model}-${car.name}`);
+  $("#myModal").modal('show')
+}
+
+//view cars on offer
+function viewCarOfferInfo(info){
+  //fill modal with this cat information
+ const offer = JSON.parse(info);
+  let content = `
+  <div class="card">
+  <div class="swiper-slide box">
+                      
+  <img src="/img/${offer.images[0].url}" alt="">
+
+  <div class="content">
+      <h2>
+        <div class="price"> <span  class="text-warning">CAR MODEL : </span>${offer.car.model}</div>
+        <div class="price"> <span class="text-warning" >CAR ID :  </span>${offer.car.id} </div>
+        <div class="price"> <span class="text-warning" >TYPE:  </span>${offer.car.type} </div>
+        <div class="price"> <span class="text-warning" >NAME:  </span>${offer.car.name} </div>
+      </h2>
+  </div> 
+            
+  <h2> 
+      <div class="price">
+        <span  class="text-danger" style="text-decoration: line-through;">Old Price :Ksh ${offer.car.price}</span>
+      </div>
+      <div class="price">
+        <span  class="text-success">New Price :Ksh </span>${offer.new_price}
+      </div>
+      <p><span class="text-warning">Color:  </span> ${offer.car.color}  </p>
+
+      <h2 class="text-warning text-center">Car Description</h2>
+      <p style="font-size:18px" class="text-muted px-3">${offer.car.description}</p>
+        
+  </h2>                      
+</div>
+</div>
+  `
+  $("#myModal").find('.modal-body').html(content);
+  $("#myModal").find('.modal-header>h1').text(`More about ${offer.car.model}-${offer.car.name}`);
   $("#myModal").modal('show')
 }
 
