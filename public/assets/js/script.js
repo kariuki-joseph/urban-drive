@@ -187,7 +187,6 @@ $("#formContact").submit(function(e){
 
 //view more car info
 function viewCarInfo(info){
-  //fill modal with this cat information
  const car = JSON.parse(info);
   let content = `
   <div class="card">
@@ -260,6 +259,47 @@ function viewCarOfferInfo(info){
   $("#myModal").find('.modal-body').html(content);
   $("#myModal").find('.modal-header>h1').text(`More about ${offer.car.model}-${offer.car.name}`);
   $("#myModal").modal('show')
+}
+
+//edit cat infomation
+function editCarInfo(info){
+  const car = JSON.parse(info);
+  let form = `
+  <form id="formCarEdit" action="vehicles/${car.id}/update" method="POST" class="border border-warning">
+    ${window.csrf}
+  <div class="mb-3">
+     <label class="text-gray form-label">Car id</label>
+     <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id" value="${car.id}">
+   <div class="mb-3">
+     <label class="text-gray form-label">Car Model</label>
+     <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model" value="${car.model}">
+   </div>
+   <div class="mb-3">
+     <label  class="text-gray form-label">Car Name</label>
+     <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name" value="${car.name}">
+   </div>
+   <div class="mb-3">
+     <label  class="text-gray form-label">Car Price</label>
+     <input type="text" name="carPrice" class="form-control" id="carName" placeholder="Enter car name" value="${car.price}">
+   </div>
+   <div class="mb-3">
+      <label  class="text-gray form-label">Car Color</label>
+      <input type="text" name="carColor" class="form-control" id="carName" placeholder="Car color" value="${car.color}">
+    </div>
+    <div class="mb-3">
+     <label  class="text-gray form-label">Car Description</label>
+     <input type="text" name="carDescription" class="form-control" id="carName" placeholder="Enter car name" value="${car.description}">
+   </div>
+   <div class="mb-3">
+   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>      
+   <button type="submit" class="btn btn-warning" name="save">Update</button>
+   </div>
+   
+</form>
+
+  `
+$("#myModalEdit").find('.modal-body').html(form);
+$("#myModalEdit").modal('show');
 }
 
 var swiper = new Swiper(".vehicles-slider", {

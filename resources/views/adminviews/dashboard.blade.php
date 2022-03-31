@@ -5,7 +5,6 @@
 
 @include('adminviews.header')
 
-
 </head>
 
 <body id="page-top">
@@ -40,8 +39,7 @@
               
               </thead>
               <tbody>
-              @foreach ($cars as $car)
-      
+                 @foreach ($cars as $car)
                 <tr>
                   <td> {{$car->id}}</td>
                   <td>{{$car->model}} </td>
@@ -55,7 +53,7 @@
                   @endif
                   <td>{{$car->price}}</td>
                   <td>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
+                    <button data-info="{{ $car }}" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModalEdit" onclick="editCarInfo(this.getAttribute('data-info'))">
                       Edit
                  </button>          
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
@@ -64,38 +62,15 @@
                   </td>
                 </tr>
                 @endforeach
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+                
+                <div class="modal fade" id="myModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalEdit" aria-hidden="true">
                      <div class="modal-dialog" role="document">
                        <div class="modal-content">
                          <div class="modal-header bg-warning" style="postion:relative">
                             <h1>EDIT CAR INFORMATION</h1>
                         </div>
                          <div class="modal-body">
-                         <form action="" method="#" class="border border-warning">
-                             <div class="mb-3">
-                                <label class="text-gray form-label">Car id</label>
-                                <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
-                              <div class="mb-3">
-                                <label class="text-gray form-label">Car Model</label>
-                                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
-                              </div>
-                              <div class="mb-3">
-                                <label  class="text-gray form-label">Car Name</label>
-                                <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
-                              </div>              
-                              <div class="mb-3">
-                                 <label class="text-gray form-label">Image</label>
-                                <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
-                              </div>
-                              <div class="mb-3">
-                                <label  class="text-gray form-label">Speciality</label>
-                                <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
-                              </div>
-                            </form>
-                         </div>
-                         <div class="modal-footer">
-                         <button type="submit" class="btn btn-warning" name="save">Add Car</button>
-                         <button type="submit" class="btn btn-secondary">Reset</button>      
+                           <!-- Edit form filled via javascript -->
                          </div>
                        </div>
                      </div>
@@ -199,18 +174,19 @@
     <script src="/asset/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="/asset/vendor/chart.js/Chart.min.js"></script>
+    <!-- <script src="/asset/vendor/chart.js/Chart.min.js"></script> -->
 
     <!-- Page level custom scripts -->
-    <script src="/asset/s/demo/chart-area-demo.js"></script>
-    <script src="/asset/js/demo/chart-pie-demo.js"></script>
+    <!-- <script src="/assets/demo/chart-area-demo.js"></script> -->
+    <!-- <script src="/asset/js/demo/chart-pie-demo.js"></script> -->
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
 <script src="/assets/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/js/popper.min.js"></script>
 <script src="/assets/js/swiper-bundle.min.js"></script>
-
+<script>
+    window.csrf = `@csrf`;
+</script>
 <script src="/assets/js/script.js"></script>
-
 </body>
 
 

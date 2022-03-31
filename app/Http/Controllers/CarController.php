@@ -54,7 +54,15 @@ class CarController extends Controller
 
     //UPDATE
     public function update(Request $request, $id){
-
+        $car = Car::find($id);
+        $car->model = $request->carModel;
+        $car->name = $request->carName;
+        $car->price = $request->carPrice;
+        $car->description = $request->carDescription;
+        $car->color = $request->carColor;
+        $car->save();
+        
+        return redirect()->back();
     }
 
     //DELETE
