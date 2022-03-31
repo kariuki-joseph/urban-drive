@@ -1,4 +1,4 @@
-die(offers)
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,10 +46,12 @@ die(offers)
         <td>{{$offer->id}}</td>
         <td>{{$offer->model}}</td>
         <td>{{$offer->name}} </td>
-        <td><img src="/assets/image/vehicle-5.png" heigth="200px" width="100px" alt=""></td>
+                    @foreach($offer->images as $image)
+                      <td><img src="/img_offer/{{ $image->url }}" heigth="200px" width="100px" alt=""></td>
+                    @endforeach
+                 
         <td>{{$offer->price}}</td>
-        <td>
-               
+        <td>              
           <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
             Delete
           </button>
@@ -79,7 +81,7 @@ die(offers)
                        </div>
                      </div>
                    </div>
-                     </div>
+                     </div> 
       @endforeach
                   
               
@@ -90,13 +92,13 @@ die(offers)
          <section class="col-4 border border-warning">
          <form action="{{url('/featured/add')}}" method="POST" enctype="multipart/form-data">
               @csrf
-              <div class="mb-3">
-                <label class="text-gray form-label">Car id</label>
-                <input type="text" name="id" class="form-control" id="carId" placeholder="Enter Car id">
-              <div class="mb-3">
+                            <div class="mb-3">
                 <label class="text-gray form-label">Car Model</label>
-                <input type="text" name="model" class="form-control" id="carModel" placeholder="Enter Car Model">
-              </div>
+                <select name="model" class="form-control form-control-lg"  placeholder="Model" required>
+                 @foreach ($models as $model)
+                  <option>{{$model->model}}</option>
+                  @endforeach
+                   </select>                 </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">Car Name</label>
                 <input type="text" name="name" class="form-control" id="carName" placeholder="Enter car name">
@@ -108,19 +110,26 @@ die(offers)
               </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">Type</label>
-                <input type="text" name="type" class="form-control" id="type" placeholder="Enter your type">
+                <select name="type" class="form-control form-control-lg" placeholder="TYPE" required>
+                     @foreach ($types as $type)
+                    <option>{{$type->types}}</option>
+                    @endforeach
+                  </select>  
               </div>
               <div class="mb-3">
                 <label class="text-gray form-label">Color</label>
-                <input type="text" name="color" class="form-control" name="color" id="color" placeholder="select car color">
-              </div>
+                <select name="color" class="form-control form-control-lg"  placeholder="COLOR" required>
+                    @foreach ($colors as $color)
+                    <option>{{$color->colors}}</option>
+                    @endforeach
+                  </select>                  </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">price</label>
                 <input type="number" name="price" class="form-control" id="price" placeholder="Enter the price ">
               </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">Description</label>
-                <textarea name="descripton" id="description" cols="20" rows="5" class="form-control " placeholder="Add your car description  here...." ></textarea>
+                <textarea name="description" id="description" cols="20" rows="5" class="form-control " placeholder="Add your car description  here...." ></textarea>
               </div>
                             
               <button type="submit" class="btn btn-warning" name="save">Submit</button>

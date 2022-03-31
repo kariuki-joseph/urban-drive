@@ -34,7 +34,7 @@ class CarController extends Controller
         $car->type=$request->type;
         $car->color=$request->color;
         $car->price=$request->price;
-        $car->description = $request->description;
+        $car->description=$request->description;
 
         
         $car->save();
@@ -86,4 +86,22 @@ class CarController extends Controller
         return view('search',compact('results'));
         }
         
+        public function deletecolor($id){
+            $color=Colors::find($id);
+            $color->delete();
+            return redirect()->back();
+            
+        }
+        public function deletetype($id){
+            $type=Types::find($id);
+            $type->delete();
+            return redirect()->back();
+            
+        }
+        public function deletemodel($id){
+            $model=Models::find($id);
+            $model->delete();
+            return redirect()->back();
+            
+        }
 }

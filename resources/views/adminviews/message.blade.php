@@ -25,34 +25,28 @@
              <thead >
                  <tr>
                      <th>User name</th>
+                     <th>Subject</th>
                      <th>Message</th>
                      <th>status</th>
                  </tr>
              </thead>
              <tbody>
-                 <tr>
-                     <td>James masara</td>
-                     <td><textarea name="" id="" cols="50" rows="4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo eligendi, tempore facilis doloremque dolore repellat fuga natus eaque a unde? Fugiat labore unde deserunt, quas a libero iste laudantium neque!
+             @foreach ($messages as $message)
+                 <tr>   
+                     <td>{{$message->username}}</td>
+                     <td>{{$message->subject}}</td>
+                     <td><textarea name="" id="" cols="50" rows="4">{{$message->message}}
                      </textarea>
                     </td>
                     <td>
-                    <button type="button" class="bg-success">
-                      Read
+                    <button type="button" class="bg-danger btn text-white">
+                      unread
                     </button>
                 
                     </td>
                  </tr>
-                 <tr>
-                     <td>justina Valentine</td>
-                     <td><textarea name="" id="" cols="50" rows="4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo eligendi, tempore facilis doloremque dolore repellat fuga natus eaque a unde? Fugiat labore unde deserunt, quas a libero iste laudantium neque!
-                     </textarea>
-                    </td>
-                    <td>
-                    <button type="button" class="bg-danger">
-                      Unread
-                    </button>
-                
-                    </td>
+                 @endforeach
+                 
                  </tr>
              </tbody>
            </table>

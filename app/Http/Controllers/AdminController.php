@@ -10,6 +10,8 @@ use App\Colors;
 use App\Types;
 use App\Models;
 use App\Order;
+use App\message;
+use App\Review;
 class AdminController extends Controller
 {
 
@@ -34,7 +36,10 @@ return view('adminviews.dashboard',compact('cars','colors','types','models'));
     }
     public function featured(){
         $offers=Offer::all();
-        return view('adminviews.featured',compact('offers'));
+        $colors=Colors::all();
+        $types=Types::all();
+        $models=Models::all();
+        return view('adminviews.featured',compact('offers','models','types','colors'));
         
     }
     public function orders(){
@@ -43,10 +48,15 @@ return view('adminviews.dashboard',compact('cars','colors','types','models'));
         return view('adminviews.orders',compact('orders'));
     }
     public function reviews(){
-        return view('adminviews.reviews');
+        $reviews=Review::all();
+
+        return view('adminviews.reviews',compact('reviews'));
     }
     public function message(){
-        return view('adminviews.message');
+        $messages=message::all();
+        // dd($messages);
+
+        return view('adminviews.message',compact('messages'));
     }   
     public function handleLogin(Request $request){
         $email = $request->email;

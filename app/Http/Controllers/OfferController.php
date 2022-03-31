@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Offer;
+use App\Colors;
+use App\Types;
+use App\Models;
 
 class OfferController extends Controller
 {
     //GET all
     public function index(){
         $offers=Offer::with('images','car')->get();
-        return view('featured',compact('offers'));
+        $colors=Colors::all();
+        $types=Types::all();
+        $models=Models::all();
+        return view('featured',compact('offers','models','types','colors'));
     }
     
     //POST
@@ -26,7 +32,8 @@ class OfferController extends Controller
        $offer->type=$request->type;
        $offer->color=$request->color;
        $offer->price=$request->price;
-       $offer->description =description;
+    //    dd($request->all());
+       $offer->description =$request->description;
 
         
        $offer->save();
@@ -51,7 +58,6 @@ class OfferController extends Controller
     //DELETE
     public function destroy($id){
         $offers=Offer::find($id);
-        die($offer);
         $offers->delete();
         return redirect()->back();
         
