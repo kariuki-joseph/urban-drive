@@ -19,7 +19,7 @@ class CreateCarsTable extends Migration
             $table->string('name',50);
             $table->string('type',10);
             $table->char('color',15);
-            $table->decimal('price');
+            $table->decimal('price',8);
             $table->string('description',200);
         });
     }

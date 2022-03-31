@@ -146,7 +146,7 @@
               </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">Description</label>
-                <textarea name="descripton" id="description" cols="20" rows="5" class="form-control " placeholder="Add your car description  here...." ></textarea>
+                <textarea name="description" id="description" cols="20" rows="5" class="form-control " placeholder="Add your car description  here...." ></textarea>
               </div>
                             
               <button type="submit" class="btn btn-warning" name="save">Submit</button>

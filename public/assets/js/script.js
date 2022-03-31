@@ -184,6 +184,41 @@ $("#formContact").submit(function(e){
       }
     }).catch(err=>console.log(err))
 })
+//view more car info
+function viewCarInfo(info){
+  //fill modal with this cat information
+ const car = JSON.parse(info);
+  let content = `
+  <div class="swiper-slide box">
+                      
+  <img src="/img/${car.images[0].url}" alt="">
+
+  <div class="content">
+      <h2>
+        <div class="price"> <span  class="text-warning">CAR MODEL : </span>${car.model}</div>
+        <div class="price"> <span class="text-warning" >CAR ID :  </span>${car.id} </div>
+        <div class="price"> <span class="text-warning" >TYPE:  </span>${car.type} </div>
+        <div class="price"> <span class="text-warning" >NAME:  </span>${car.name} </div>
+      </h2>
+  </div> 
+            
+  <h2> 
+      <div class="price">
+        <span  class="text-warning">price :ksh </span>${car.price}
+      </div>
+      <p><span class="text-warning">Color:  </span> ${car.color}  </p>
+
+      <h2 class="text-warning text-center">Car Description</h2>
+      <p style="font-size:18px" class="text-muted px-3">${car.description}</p>
+        
+  </h2>                      
+</div>
+  `
+  $("#myModal").find('.card').html(content);
+  $("#myModal").find('.modal-header>h1').text(`About ${car.model}-${car.name}`);
+  $("#myModal").modal('show')
+}
+
 var swiper = new Swiper(".vehicles-slider", {
   grabCursor: true,
   centeredSlides: true,  

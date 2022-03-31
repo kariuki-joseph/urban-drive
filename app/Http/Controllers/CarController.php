@@ -26,7 +26,7 @@ class CarController extends Controller
         $car= new Car();
         $image = $request->file('image');
         $imagename =time().'.'.$image->getClientOriginalExtension();
-        $image->move('img',$imagename);
+        
 
 
         $car->model=$request->model;
@@ -34,16 +34,15 @@ class CarController extends Controller
         $car->type=$request->type;
         $car->color=$request->color;
         $car->price=$request->price;
-        $car->description =description;
+        $car->description = $request->description;
 
         
         $car->save();
         
-
         $car->images()->create([
             'url'=>$imagename
         ]);
-
+        $image->move('img',$imagename);
      return redirect()->back();
 
     }
