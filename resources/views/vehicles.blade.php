@@ -52,6 +52,7 @@
               <div class="swiper-pagination"></div>
 
           </div>
+  </form>
           <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal1">
               BOOK A CAR HERE
             </button>

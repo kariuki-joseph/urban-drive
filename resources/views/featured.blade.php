@@ -8,7 +8,7 @@
        <div class="swiper-wrapper">
   
             <div class="swiper-slide box">
-                <img src="{{ 'img/'.$offer->images[0]->url }}" alt="">
+                <img src="{{ '/img/'.$offer->images[0]->url }}" alt="">
                 <div class="content">
                 <h3>{{$offer->car->model}}</h3>
                 <h3>Car Id: {{$offer->car->id}}</h3>
