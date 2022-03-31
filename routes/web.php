@@ -70,6 +70,10 @@ Route::post('/bookcar','OrderController@store');
 
 Route::post('/sendmessage','ContactController@store');
 Route::get('/search/vehicle','CarController@search');
+Route::get('/admin/carinfo/deletecolor/{id}','CarController@deletecolor');
+Route::get('/admin/carinfo/deletetype/{id}','CarController@deletetype');
+Route::get('/admin/carinfo/deletemodel/{id}','CarController@deletemodel');
+
 
 
 

@@ -20,39 +20,57 @@
             </div>
 
        </div>
+       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                   <div class="modal-header bg-warning" style="postion:relative">
+                          <h1>MORE CAR INFORMATION
+                          </h1>
+                          <button type="button" class="btn-close  btn" data-bs-dismiss="modal" aria-label="Close">close</button>
+                    </div>
+                         <div class="modal-body">
+                    <div class="card">   
+                                
+                    <div class="swiper-slide box">
+                    @if($offer->images()->exists())
+                      @foreach($offer->images as $image)
+                        <img src="/img/{{$image->url}}" alt="">
+                      @endforeach
+                   @endif
+                 <div class="content"><h2>
+                 <div class="price"> <span  class="text-warning">CAR MODEL : </span>{{$offer->model}}</div>
+                   <div class="price"> <span class="text-warning" >CAR ID :  </span>{{$offer->id}} </div>
+                   <div class="price"> <span class="text-warning" >TYPE:  </span>{{$offer->type}} </div>
+                   <div class="price"> <span class="text-warning" >NAME:  </span>{{$offer->name}} </div>
+                  </h2>
+                  
+                </div> 
+                                   
+                   <h2>  <div class="price"> <span  class="text-warning">price :ksh </span>{{$offer->price}}</div>
+    
+                   
+                       <p>
+                   <span class="fas fa-circle"></span  class="text-warning"> {{$offer->color}}  </p>
+                        <textarea name="desription" id="" cols="30" rows="5">
+                        {{$offer->description}}
+                        </textarea>
+                       </h2>  
+                                    
+                 </div>
+                 
+             </div>
+                     </div>
+                         <div class="modal-footer">
+                          <a href="#" class="btn btn-secondary close" data-dismiss="modal">CANCEL</a>       
+                         </div>
+                       </div>
+                     </div>
        @endforeach
        <div class="swiper-pagination"></div>
 
     </div>
     
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header bg-warning" style="postion:relative">
-                            <h1>BOOK A CAR NOW
-                            </h1>
-                        </div>
-                         <div class="modal-body">
-                    <div class="card">                 
-                    <div class="swiper-slide box">
-                 <img src="/img/{{$offer->images[0]->url}}" alt="">
-                 <div class="content">
-                    <h2> {{$offer->model}}</h2>
-                 <h2>   <div class="price"> <span>CAR ID :  </span>{{$offer->id}} </div></h2>
-                  
-                </div> 
-                                   
-                   <h2>  <div class="price"> <span>price :ksh </span>{{$offer  ->price}}</div>
-    
-                   
-                       <p>
-                   <span class="fas fa-circle"></span> {{$offer->color}}  </p>
-                        <textarea name="" id="" cols="30" rows="3">
-                        {{$offer   ->description}}
-                        </textarea>
-                       </h2>                      
-                 </div>
-             </div>
+
                       
 
 </section>

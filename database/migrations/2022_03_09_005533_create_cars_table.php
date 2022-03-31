@@ -17,9 +17,9 @@ class CreateCarsTable extends Migration
             $table->id();
             $table->string('model',30);
             $table->string('name',50);
-            $table->string('type',10);
+            $table->string('type',20);
             $table->char('color',15);
-            $table->decimal('price');
+            $table->decimal('price',30);
             $table->string('description',200);
         });
     }

@@ -55,52 +55,14 @@
                   @endif
                   <td>{{$car->price}}</td>
                   <td>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
-                      Edit
-                 </button>          
+                             
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal1">
                       Delete
                     </button>
                   </td>
                 </tr>
                 @endforeach
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header bg-warning" style="postion:relative">
-                            <h1>EDIT CAR INFORMATION</h1>
-                        </div>
-                         <div class="modal-body">
-                         <form action="" method="#" class="border border-warning">
-                             <div class="mb-3">
-                                <label class="text-gray form-label">Car id</label>
-                                <input type="text" name="carID" class="form-control" id="carId" placeholder="Enter Car id">
-                              <div class="mb-3">
-                                <label class="text-gray form-label">Car Model</label>
-                                <input type="text" name="carModel" class="form-control" id="carModel" placeholder="Enter Car Model">
-                              </div>
-                              <div class="mb-3">
-                                <label  class="text-gray form-label">Car Name</label>
-                                <input type="text" name="carName" class="form-control" id="carName" placeholder="Enter car name">
-                              </div>              
-                              <div class="mb-3">
-                                 <label class="text-gray form-label">Image</label>
-                                <input type="file" name="age" class="form-control" name="age" id="age" placeholder="Enter Your Age">
-                              </div>
-                              <div class="mb-3">
-                                <label  class="text-gray form-label">Speciality</label>
-                                <input type="text" name="speciality" class="form-control" id="speciality" placeholder="Enter your speciality">
-                              </div>
-                            </form>
-                         </div>
-                         <div class="modal-footer">
-                         <button type="submit" class="btn btn-warning" name="save">Add Car</button>
-                         <button type="submit" class="btn btn-secondary">Reset</button>      
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                
+              
               </tbody>
             </table>  
           </section>
@@ -146,7 +108,7 @@
               </div>
               <div class="mb-3">
                 <label  class="text-gray form-label">Description</label>
-                <textarea name="descripton" id="description" cols="20" rows="5" class="form-control " placeholder="Add your car description  here...." ></textarea>
+                <textarea name="description" id="description" cols="20" rows="5" class="form-control " placeholder="Add your car description  here...." ></textarea>
               </div>
                             
               <button type="submit" class="btn btn-warning" name="save">Submit</button>

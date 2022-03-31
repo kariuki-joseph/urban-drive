@@ -41,11 +41,11 @@
          {{$model->model}}
         </td>
         <td>
-        <a href="/admin/carinfo/deletemodel">
+        <a href="{{ url('/admin/carinfo/deletemodel', ['id' => $model->id]) }}">
                   <button class="btn btn-danger">
                            Delete
                     </button>
-                </a>
+                </a> 
         </td>
        
       </tr>
@@ -92,11 +92,11 @@
          {{$type->types}}
         </td>
         <td>
-        <a href="/admin/carinfo/deletetype">
+        <a href="{{ url('/admin/carinfo/deletetype', ['id' => $type->id]) }}">
                   <button class="btn btn-danger">
                            Delete
                     </button>
-                </a>
+                </a>  
         </td>
        
       </tr>
@@ -143,11 +143,11 @@
          {{$color->colors}}
         </td>
         <td>
-        <a href="/admin/carinfo/deletecolor">
+        <a href="{{ url('/admin/carinfo/deletecolor', ['id' => $color->id]) }}">
                   <button class="btn btn-danger">
                            Delete
                     </button>
-                </a>
+                </a>  
         </td>
        
       </tr>

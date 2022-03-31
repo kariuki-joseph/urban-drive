@@ -9,43 +9,16 @@
             
                 @foreach($reviews as $review)
                 <div class="swiper-slide box">
-                    <img src="assets/image/pic-1.png" alt="">
+                   
                     <div class="content">
-                    <p>A was able to purchase my first dream car from this site and I 
-                            received te best customer care services that i really appreciate.this the best site to get a car</p>
-                        <h3>JAMES MASARA</h3>
+                    <p>{{$review->review}}</p>
+                        <h3>{{$review->username}}</h3>
                     </div>
                 </div>
                 @endforeach
-            <div class="swiper-slide box">
-                <img src="assets/image/pic-2.png" alt="">
-                <div class="content">
-                <p>This is the best website to acquir a brand new car especially for beginners who might be ignorant when it come to this.
-</p>
-                    <h3>DAVID MUGO</h3>
-                  
-                </div>
-            </div>
+    
 
-            <div class="swiper-slide box">
-                <img src="assets/image/pic-3.png" alt="">
-                <div class="content">
-                    <p>A was able to purchase my first dream car from this site and I 
-                        received te best customer care services that i really appreciate.this the best site to get a car</p>
-                    <h3>John Kamau</h3>
-                 
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="assets/image/pic-6.png" alt="">
-                <div class="content">
-                <p>This is the best website to acquir a brand new car especially for beginners who might be ignorant when it come to this.
-</p>
-                    <h3>LYDIA LEMARIMBE</h3>
-                 
-                </div>
-            </div>
+           
 
         </div>
 
